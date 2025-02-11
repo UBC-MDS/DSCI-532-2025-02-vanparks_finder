@@ -41,7 +41,7 @@ We recommend creating a separate Git branch for each pull request:
 
 ## Code of Conduct
 
-Participation in this project implies agreement to abide by the [Code of Conduct](https://github.com/UBC-MDS/Car_Evaluation_Analysis/blob/main/CODE_OF_CONDUCT.md).
+Participation in this project implies agreement to abide by the [Code of Conduct](https://github.com/UBC-MDS/DSCI-532-2025-02-vanparks_finder/blob/main/CODE_OF_CONDUCT.md).
 
 ## Attribution
 
