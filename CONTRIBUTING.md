@@ -12,7 +12,7 @@ Minor grammatical errors or typos can be corrected directly using the GitHub web
 
 Before making a significant pull request, it's important to first raise an issue and ensure someone from the team acknowledges it as a problem. If you found a bug, create a related issue and demonstrate the bug with precise language.
   
-- **Open an Issue**: [Report bugs or suggest features here](https://github.com/UBC-MDS/Car_Evaluation_Analysis/issues).
+- **Open an Issue**: [Report bugs or suggest features here](https://github.com/UBC-MDS/DSCI-532-2025-02-vanparks_finder/issues).
   
 - **Adding Description**: Provide a detailed description of the bug or feature suggestion.
   
