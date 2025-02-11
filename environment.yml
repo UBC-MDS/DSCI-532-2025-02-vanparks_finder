@@ -1,0 +1,16 @@
+# install with conda env create -f environment.yml
+name: 'vanparks_finder'
+channels:
+    - conda-forge
+    - defaults
+dependencies:
+    - python=3.11 
+    - ipykernel
+    - altair-all
+    - dash
+    - dash-bootstrap-components
+    - plotly
+    - tabulate  # df.to_markdown()
+    - pip
+    - pip:
+        - dash-vega-components
