@@ -1,0 +1,634 @@
+﻿ParkID;Name;FacilityType;FacilityCount;FacilityURL
+2;Carnarvon Park;Softball;2;
+14;Coopers' Park;Basketball Courts;1;
+18;Devonian Harbour Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+21;Harbour Green Park;Water/Spray Parks;1;
+21;Harbour Green Park;Restaurants;1;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+28;CRAB Park at Portside;Water/Spray Parks;1;
+28;CRAB Park at Portside;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+34;Balaclava Park;Wading Pool;1;
+34;Balaclava Park;Rugby Fields;1;
+34;Balaclava Park;Running Tracks;1;
+37;Chaldecott Park;Baseball Diamonds;2;
+37;Chaldecott Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+39;Memorial West Park;Baseball Diamonds;2;
+39;Memorial West Park;Bowling Greens;1;
+39;Memorial West Park;Tennis Courts;6;
+43;Charleson Park;Soccer Fields;1;
+43;Charleson Park;Tennis Courts;5;
+44;Granville Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+45;Granville Loop Park;Tennis Courts;2;
+45;Granville Loop Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+47;Sutcliffe Park;Tennis Courts;2;
+51;Garden Park;Basketball Courts;1;
+56;Oxford Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+60;Templeton Park;Running Tracks;1;
+65;Adanac Park;Field Houses;1;
+70;Clinton Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+70;Clinton Park;Soccer Fields;3;
+73;Hastings Community Park;Field Houses;1;
+73;Hastings Community Park;Tennis Courts;2;
+75;New Brighton Park;Soccer Fields;1;
+77;Sunrise Park;Community Halls;1;
+77;Sunrise Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+80;Cedar Cottage Park;Basketball Courts;2;
+81;Clark Park;Soccer Fields;1;
+81;Clark Park;Basketball Courts;1;
+84;Grays Park;Basketball Courts;1;
+85;John Hendry (Trout Lake) Park;Tennis Courts;3;
+85;John Hendry (Trout Lake) Park;Softball;2;
+85;John Hendry (Trout Lake) Park;Pickle Ball;1;
+87;Kensington Park;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+91;Elm Park;Tennis Courts;2;
+91;Elm Park;Bowling Greens;1;
+93;Kerrisdale Centennial Park;Swimming Pools;1;http://vancouver.ca/parks-recreation-culture/swimming-pools.aspx
+93;Kerrisdale Centennial Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+96;Maple Grove Park;Field Houses;1;
+103;Killarney Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+105;Sparwood Park;Soccer Fields;1;
+106;Almond Park;Tennis Courts;2;
+108;Connaught Park;Soccer Fields;1;
+108;Connaught Park;Softball;4;
+108;Connaught Park;Cricket Pitches;1;
+112;Kitsilano Beach Park;Water/Spray Parks;1;
+112;Kitsilano Beach Park;Restaurants;1;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+114;McBride Park;Tennis Courts;4;
+119;Tatlow Park;Tennis Courts;3;
+126;Oak Park;Ball Hockey;1;
+127;Riverview Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+130;William Mackie Park;Basketball Courts;1;
+136;Guelph Park;Tennis Courts;2;
+137;Jonathan Rogers Park;Softball;1;
+145;Langara Golf Course;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+146;Montgomery Park;Field Houses;1;
+148;Beaconsfield Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+149;Cariboo Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+151;Collingwood Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+151;Collingwood Park;Soccer Fields;1;
+151;Collingwood Park;Wading Pool;1;
+156;Melbourne Park;Basketball Courts;1;
+157;Norquay Park;Field Houses;1;
+157;Norquay Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+159;Renfrew Community Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+161;Slocan Park;Ultimate Fields;1;
+162;Cartier Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+164;Hillcrest Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+164;Hillcrest Park;Soccer Fields;3;
+166;Prince Edward Park;Field Houses;1;
+166;Prince Edward Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+167;Queen Elizabeth Park;Bowling Greens;1;
+167;Queen Elizabeth Park;Restaurants;1;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+173;VanDusen Botanical Garden;Restaurants;1;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+180;Oppenheimer Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+185;MacDonald Park;Tennis Courts;3;
+186;Memorial South Park;Lacrosse Boxes;1;
+186;Memorial South Park;Lighted Fields;1;
+186;Memorial South Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+186;Memorial South Park;Soccer Fields;4;
+186;Memorial South Park;Softball;2;
+186;Memorial South Park;Picnic Sites;1;http://vancouver.ca/parks-recreation-culture/picnics.aspx
+186;Memorial South Park;Ball Hockey;1;
+186;Memorial South Park;Field Hockey;1;
+186;Memorial South Park;Ultimate Fields;1;
+187;Moberly Park;Community Halls;1;
+187;Moberly Park;Field Houses;1;
+189;Sunset Park;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+189;Sunset Park;Soccer Fields;1;
+194;Gordon Park;Football Fields;1;
+195;Humm Park;Basketball Courts;1;
+197;Riverfront Park;Ultimate Fields;1;
+203;Nelson Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+206;Stanley Park;Picnic Sites;1;http://vancouver.ca/parks-recreation-culture/picnics.aspx
+206;Stanley Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+206;Stanley Park;Bowling Greens;2;
+206;Stanley Park;Swimming Pools;1;http://vancouver.ca/parks-recreation-culture/swimming-pools.aspx
+206;Stanley Park;Tennis Courts;21;
+206;Stanley Park;Picnic Sites;1;http://vancouver.ca/parks-recreation-culture/picnics.aspx
+206;Stanley Park;Running Tracks;1;
+207;Sunset Beach Park;Field Houses;1;
+207;Sunset Beach Park;Outdoor Roller Hockey Rinks;1;
+207;Sunset Beach Park;Beaches;1;http://vancouver.ca/parks-recreation-culture/beaches.aspx
+218;Jericho Beach Park;Baseball Diamonds;1;
+218;Jericho Beach Park;Ultimate Fields;1;
+219;Locarno Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+221;West Point Grey Park;Baseball Diamonds;1;
+221;West Point Grey Park;Soccer Fields;2;
+221;West Point Grey Park;Tennis Courts;4;
+222;Westmount Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+224;Choklit Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+235;Granville Island Water Park;Water/Spray Parks;1;
+236;Ebisu Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+2;Carnarvon Park;Baseball Diamonds;3;
+2;Carnarvon Park;Football Fields;1;
+6;Quilchena Park;Field Houses;1;
+6;Quilchena Park;Soccer Fields;2;
+8;Trafalgar Park;Softball;2;
+8;Trafalgar Park;Ultimate Fields;1;
+10;Andy Livingstone Park;Soccer Fields;2;
+10;Andy Livingstone Park;Skateboard Parks;1;http://vancouver.ca/parks-recreation-culture/skateboard-parks.aspx
+13;Coal Harbour Park;Community Halls;1;
+37;Chaldecott Park;Field Houses;1;
+37;Chaldecott Park;Soccer Fields;2;
+40;Musqueam Park;Soccer Fields;2;
+40;Musqueam Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+43;Charleson Park;Playgrounds;2;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+47;Sutcliffe Park;Basketball Courts;1;
+52;Grandview Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+52;Grandview Park;Field Houses;1;
+54;McSpadden Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+57;Pandora Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+57;Pandora Park;Water/Spray Parks;1;
+60;Templeton Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+64;Woodland Park;Soccer Fields;2;
+64;Woodland Park;Softball;2;
+70;Clinton Park;Baseball Diamonds;1;
+72;Hastings Park;Basketball Courts;1;
+73;Hastings Community Park;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+73;Hastings Community Park;Baseball Diamonds;1;
+74;Kaslo Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+75;New Brighton Park;Picnic Sites;1;http://vancouver.ca/parks-recreation-culture/picnics.aspx
+75;New Brighton Park;Swimming Pools;1;http://vancouver.ca/parks-recreation-culture/swimming-pools.aspx
+76;Rupert Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+76;Rupert Park;Soccer Fields;1;
+82;General Brock Park;Ball Hockey;1;
+84;Grays Park;Tennis Courts;2;
+87;Kensington Park;Softball;4;
+87;Kensington Park;Swimming Pools;1;http://vancouver.ca/parks-recreation-culture/swimming-pools.aspx
+88;Kingcrest Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+88;Kingcrest Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+91;Elm Park;Soccer Fields;1;
+92;Fraser River Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+93;Kerrisdale Centennial Park;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+98;McCleery Golf Course;Golf Courses;1;http://vancouver.ca/parks-recreation-culture/golf-courses-pitch-and-putts-and-driving-ranges.aspx
+100;Champlain Heights Park;Softball;2;
+100;Champlain Heights Park;Soccer Fields;1;
+100;Champlain Heights Park;Tennis Courts;4;
+103;Killarney Park;Baseball Diamonds;3;
+103;Killarney Park;Wading Pool;1;
+103;Killarney Park;Softball;1;
+112;Kitsilano Beach Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+112;Kitsilano Beach Park;Tennis Courts;10;
+126;Oak Park;Field Houses;1;
+126;Oak Park;Tennis Courts;2;
+131;Winona Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+140;Robson Park;Wading Pool;1;
+143;Columbia Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+143;Columbia Park;Wading Pool;1;
+146;Montgomery Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+146;Montgomery Park;Soccer Fields;2;
+147;Tisdall Park;Ultimate Fields;2;
+148;Beaconsfield Park;Softball;1;
+148;Beaconsfield Park;Field Houses;1;
+148;Beaconsfield Park;Lighted Fields;1;
+152;Earles Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+153;Falaise Park;Football Fields;1;
+156;Melbourne Park;Tennis Courts;2;
+159;Renfrew Community Park;Lighted Fields;1;
+159;Renfrew Community Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+159;Renfrew Community Park;Swimming Pools;1;http://vancouver.ca/parks-recreation-culture/swimming-pools.aspx
+159;Renfrew Community Park;Football Fields;1;
+159;Renfrew Community Park;Wading Pool;1;
+161;Slocan Park;Tennis Courts;4;
+164;Hillcrest Park;Rinks;1;http://vancouver.ca/parks-recreation-culture/ice-rinks.aspx
+164;Hillcrest Park;Jogging Trails;1;
+165;Nat Bailey Stadium;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+167;Queen Elizabeth Park;Field Houses;1;
+167;Queen Elizabeth Park;Golf Courses;1;http://vancouver.ca/parks-recreation-culture/golf-courses-pitch-and-putts-and-driving-ranges.aspx
+167;Queen Elizabeth Park;Disc Golf Courses;1;
+168;Riley Park;Baseball Diamonds;1;
+168;Riley Park;Playgrounds;2;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+171;Kerrisdale Park;Rinks;1;http://vancouver.ca/parks-recreation-culture/ice-rinks.aspx
+175;Douglas Park;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+175;Douglas Park;Playgrounds;2;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+175;Douglas Park;Basketball Courts;1;
+175;Douglas Park;Wading Pool;1;
+179;MacLean Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+179;MacLean Park;Softball;1;
+181;Strathcona Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+182;Strathcona Linear Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+184;George Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+186;Memorial South Park;Baseball Diamonds;1;
+186;Memorial South Park;Field Houses;2;
+186;Memorial South Park;Running Tracks;1;
+187;Moberly Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+187;Moberly Park;Tennis Courts;4;
+188;Ross Park;Football Fields;1;
+188;Ross Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+188;Ross Park;Soccer Fields;1;
+189;Sunset Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+189;Sunset Park;Rinks;1;http://vancouver.ca/parks-recreation-culture/ice-rinks.aspx
+189;Sunset Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+191;Bobolink Park;Field Houses;1;
+191;Bobolink Park;Wading Pool;1;
+192;Fraserview Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+192;Fraserview Park;Soccer Fields;1;
+194;Gordon Park;Field Houses;1;
+194;Gordon Park;Baseball Diamonds;2;
+196;Nanaimo Park;Baseball Diamonds;3;
+196;Nanaimo Park;Field Houses;1;
+196;Nanaimo Park;Ultimate Fields;1;
+197;Riverfront Park;Tennis Courts;2;
+198;Tecumseh Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+206;Stanley Park;Picnic Sites;1;http://vancouver.ca/parks-recreation-culture/picnics.aspx
+206;Stanley Park;Softball;2;
+206;Stanley Park;Restaurants;4;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+206;Stanley Park;Food Concessions;7;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+207;Sunset Beach Park;Ball Hockey;1;
+217;Hastings Mill Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+218;Jericho Beach Park;Softball;1;
+218;Jericho Beach Park;Rugby Fields;1;
+218;Jericho Beach Park;Tennis Courts;4;
+218;Jericho Beach Park;Field Hockey;1;
+219;Locarno Park;Beaches;1;http://vancouver.ca/parks-recreation-culture/beaches.aspx
+219;Locarno Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+220;Spanish Banks Beach Park;Beaches;1;http://vancouver.ca/parks-recreation-culture/beaches.aspx
+221;West Point Grey Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+221;West Point Grey Park;Basketball Courts;2;
+228;Oak Meadows Park;Field Hockey;1;
+228;Oak Meadows Park;Jogging Trails;1;
+228;Oak Meadows Park;Ultimate Fields;2;
+234;Aberdeen Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+240;Hinge Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+240;Hinge Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+245;Trillium Park;Ultimate Fields;1;
+2;Carnarvon Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+2;Carnarvon Park;Soccer Fields;1;
+3;Prince of Wales Park;Soccer Fields;1;
+3;Prince of Wales Park;Jogging Trails;1;
+6;Quilchena Park;Baseball Diamonds;2;
+6;Quilchena Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+6;Quilchena Park;Disc Golf Courses;1;
+6;Quilchena Park;Jogging Trails;1;
+8;Trafalgar Park;Baseball Diamonds;1;
+8;Trafalgar Park;Cricket Pitches;1;
+8;Trafalgar Park;Soccer Fields;2;
+10;Andy Livingstone Park;Field Houses;1;
+10;Andy Livingstone Park;Playgrounds;3;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+10;Andy Livingstone Park;Softball;1;
+10;Andy Livingstone Park;Lighted Fields;1;
+10;Andy Livingstone Park;Tennis Courts;2;
+10;Andy Livingstone Park;Basketball Courts;1;
+14;Coopers' Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+16;David Lam Park;Soccer Fields;1;
+16;David Lam Park;Basketball Courts;2;
+16;David Lam Park;Tennis Courts;2;
+20;Emery Barnes Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+20;Emery Barnes Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+34;Balaclava Park;Lighted Fields;1;
+34;Balaclava Park;Ultimate Fields;1;
+37;Chaldecott Park;Water/Spray Parks;1;
+39;Memorial West Park;Field Houses;1;
+39;Memorial West Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+42;Valdez Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+44;Granville Park;Field Houses;1;
+44;Granville Park;Bowling Greens;2;
+51;Garden Park;Field Houses;1;
+51;Garden Park;Water/Spray Parks;1;
+51;Garden Park;Ball Hockey;1;
+54;McSpadden Park;Tennis Courts;2;
+57;Pandora Park;Tennis Courts;4;
+62;Victoria Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+64;Woodland Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+64;Woodland Park;Wading Pool;1;
+65;Adanac Park;Football Fields;2;
+65;Adanac Park;Soccer Fields;3;
+67;Burrard View Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+67;Burrard View Park;Wading Pool;1;
+68;Callister Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+70;Clinton Park;Wading Pool;1;
+71;Dusty Greenwell Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+72;Hastings Park;Skateboard Parks;1;http://vancouver.ca/parks-recreation-culture/skateboard-parks.aspx
+73;Hastings Community Park;Basketball Courts;1;
+73;Hastings Community Park;Playgrounds;2;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+73;Hastings Community Park;Water/Spray Parks;1;
+75;New Brighton Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+76;Rupert Park;Golf Courses;1;http://vancouver.ca/parks-recreation-culture/golf-courses-pitch-and-putts-and-driving-ranges.aspx
+76;Rupert Park;Tennis Courts;4;
+77;Sunrise Park;Field Houses;1;
+77;Sunrise Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+77;Sunrise Park;Wading Pool;1;
+78;Thunderbird Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+79;Brewers Park;Field Houses;1;
+79;Brewers Park;Basketball Courts;1;
+79;Brewers Park;Wading Pool;1;
+79;Brewers Park;Soccer Fields;1;
+80;Cedar Cottage Park;Ball Hockey;1;
+81;Clark Park;Playgrounds;2;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+81;Clark Park;Tennis Courts;4;
+81;Clark Park;Ball Hockey;1;
+82;General Brock Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+83;Glen Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+84;Grays Park;Bowling Greens;2;
+84;Grays Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+84;Grays Park;Wading Pool;1;
+84;Grays Park;Ball Hockey;1;
+85;John Hendry (Trout Lake) Park;Baseball Diamonds;2;
+85;John Hendry (Trout Lake) Park;Playgrounds;2;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+85;John Hendry (Trout Lake) Park;Soccer Fields;2;
+85;John Hendry (Trout Lake) Park;Field Houses;1;
+85;John Hendry (Trout Lake) Park;Lighted Fields;1;
+85;John Hendry (Trout Lake) Park;Basketball Courts;1;
+85;John Hendry (Trout Lake) Park;Picnic Sites;1;http://vancouver.ca/parks-recreation-culture/picnics.aspx
+85;John Hendry (Trout Lake) Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+86;Jones Park;Field Houses;1;
+86;Jones Park;Soccer Fields;1;
+86;Jones Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+86;Jones Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+87;Kensington Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+87;Kensington Park;Community Halls;1;
+89;Sunnyside Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+91;Elm Park;Field Houses;1;
+92;Fraser River Park;Picnic Sites;1;http://vancouver.ca/parks-recreation-culture/picnics.aspx
+96;Maple Grove Park;Soccer Fields;1;
+96;Maple Grove Park;Picnic Sites;1;http://vancouver.ca/parks-recreation-culture/picnics.aspx
+96;Maple Grove Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+96;Maple Grove Park;Wading Pool;1;
+99;Captain Cook Park;Tennis Courts;2;
+100;Champlain Heights Park;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+100;Champlain Heights Park;Playgrounds;4;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+102;Fraserview Golf Course;Jogging Trails;1;
+102;Fraserview Golf Course;Restaurants;1;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+103;Killarney Park;Community Halls;1;
+103;Killarney Park;Rinks;1;http://vancouver.ca/parks-recreation-culture/ice-rinks.aspx
+103;Killarney Park;Swimming Pools;1;http://vancouver.ca/parks-recreation-culture/swimming-pools.aspx
+103;Killarney Park;Running Tracks;1;
+105;Sparwood Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+108;Connaught Park;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+108;Connaught Park;Field Houses;1;
+108;Connaught Park;Rinks;1;http://vancouver.ca/parks-recreation-culture/ice-rinks.aspx
+108;Connaught Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+108;Connaught Park;Rugby Fields;2;
+108;Connaught Park;Water/Spray Parks;1;
+110;Hadden Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+112;Kitsilano Beach Park;Basketball Courts;2;
+112;Kitsilano Beach Park;Beaches;1;http://vancouver.ca/parks-recreation-culture/beaches.aspx
+112;Kitsilano Beach Park;Food Concessions;1;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+114;McBride Park;Field Houses;1;
+114;McBride Park;Softball;2;
+119;Tatlow Park;Field Houses;1;
+123;Eburne Park;Tennis Courts;4;
+124;Marpole Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+126;Oak Park;Baseball Diamonds;2;
+126;Oak Park;Lighted Fields;1;
+126;Oak Park;Basketball Courts;1;
+126;Oak Park;Water/Spray Parks;1;
+128;Shannon Park;Soccer Fields;1;
+128;Shannon Park;Softball;1;
+130;William Mackie Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+131;Winona Park;Field Houses;1;
+131;Winona Park;Football Fields;1;
+131;Winona Park;Rugby Fields;1;
+133;China Creek North Park;Soccer Fields;1;
+133;China Creek North Park;Softball;2;
+134;China Creek South Park;Skateboard Parks;1;http://vancouver.ca/parks-recreation-culture/skateboard-parks.aspx
+137;Jonathan Rogers Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+138;Major Matthews Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+139;Mount Pleasant Park;Skateboard Parks;1;http://vancouver.ca/parks-recreation-culture/skateboard-parks.aspx
+140;Robson Park;Field Houses;1;
+140;Robson Park;Tennis Courts;3;
+140;Robson Park;Basketball Courts;2;
+140;Robson Park;Ball Hockey;1;
+143;Columbia Park;Field Houses;1;
+143;Columbia Park;Softball;2;
+143;Columbia Park;Ultimate Fields;2;
+145;Langara Golf Course;Golf Courses;1;http://vancouver.ca/parks-recreation-culture/golf-courses-pitch-and-putts-and-driving-ranges.aspx
+145;Langara Golf Course;Tennis Courts;4;
+147;Tisdall Park;Football Fields;1;
+147;Tisdall Park;Softball;1;
+148;Beaconsfield Park;Soccer Fields;3;
+148;Beaconsfield Park;Baseball Diamonds;1;
+150;Carleton Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+151;Collingwood Park;Softball;1;
+152;Earles Park;Softball;1;
+152;Earles Park;Soccer Fields;1;
+152;Earles Park;Jogging Trails;1;
+153;Falaise Park;Community Halls;1;
+153;Falaise Park;Soccer Fields;1;
+155;Gaston Park;Soccer Fields;1;
+155;Gaston Park;Basketball Courts;1;
+157;Norquay Park;Softball;2;
+157;Norquay Park;Water/Spray Parks;1;
+159;Renfrew Community Park;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+159;Renfrew Community Park;Softball;1;
+159;Renfrew Community Park;Ball Hockey;1;
+161;Slocan Park;Field Houses;1;
+161;Slocan Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+161;Slocan Park;Soccer Fields;1;
+161;Slocan Park;Wading Pool;1;
+164;Hillcrest Park;Baseball Diamonds;4;
+166;Prince Edward Park;Water/Spray Parks;1;
+167;Queen Elizabeth Park;Tennis Courts;17;
+167;Queen Elizabeth Park;Basketball Courts;4;
+167;Queen Elizabeth Park;Pickle Ball;4;
+167;Queen Elizabeth Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+167;Queen Elizabeth Park;Ball Hockey;2;
+168;Riley Park;Field Houses;1;
+168;Riley Park;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+171;Kerrisdale Park;Soccer Fields;2;
+171;Kerrisdale Park;Field Hockey;1;
+171;Kerrisdale Park;Ultimate Fields;1;
+174;Braemar Park;Field Houses;1;
+174;Braemar Park;Rugby Fields;1;
+174;Braemar Park;Lighted Fields;1;
+175;Douglas Park;Cricket Pitches;2;
+175;Douglas Park;Softball;4;
+175;Douglas Park;Jogging Trails;1;
+179;MacLean Park;Water/Spray Parks;1;
+181;Strathcona Park;Skateboard Parks;1;http://vancouver.ca/parks-recreation-culture/skateboard-parks.aspx
+181;Strathcona Park;Baseball Diamonds;1;
+181;Strathcona Park;Softball;2;
+181;Strathcona Park;Basketball Courts;1;
+181;Strathcona Park;Running Tracks;1;
+6;Quilchena Park;Skateboard Parks;1;http://vancouver.ca/parks-recreation-culture/skateboard-parks.aspx
+8;Trafalgar Park;Field Houses;1;
+8;Trafalgar Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+10;Andy Livingstone Park;Field Hockey;2;
+10;Andy Livingstone Park;Ultimate Fields;2;
+14;Coopers' Park;Skateboard Parks;1;http://vancouver.ca/parks-recreation-culture/skateboard-parks.aspx
+15;Creekside Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+29;Roundhouse Turntable Plaza;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+34;Balaclava Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+34;Balaclava Park;Softball;1;
+34;Balaclava Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+39;Memorial West Park;Soccer Fields;1;
+39;Memorial West Park;Basketball Courts;1;
+44;Granville Park;Tennis Courts;4;
+47;Sutcliffe Park;Ball Hockey;1;
+52;Grandview Park;Water/Spray Parks;1;
+60;Templeton Park;Swimming Pools;1;http://vancouver.ca/parks-recreation-culture/swimming-pools.aspx
+60;Templeton Park;Soccer Fields;1;
+60;Templeton Park;Softball;1;
+63;W.C. Shelly Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+75;New Brighton Park;Playgrounds;2;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+75;New Brighton Park;Food Concessions;1;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+76;Rupert Park;Field Houses;1;
+76;Rupert Park;Football Fields;1;
+76;Rupert Park;Rugby Fields;1;
+76;Rupert Park;Softball;1;
+79;Brewers Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+81;Clark Park;Softball;1;
+82;General Brock Park;Ultimate Fields;1;
+83;Glen Park;Basketball Courts;1;
+85;John Hendry (Trout Lake) Park;Rugby Fields;1;
+87;Kensington Park;Soccer Fields;2;
+88;Kingcrest Park;Ultimate Fields;1;
+88;Kingcrest Park;Basketball Courts;1;
+90;Arbutus Park;Soccer Fields;1;
+91;Elm Park;Baseball Diamonds;1;
+98;McCleery Golf Course;Restaurants;1;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+102;Fraserview Golf Course;Golf Courses;1;http://vancouver.ca/parks-recreation-culture/golf-courses-pitch-and-putts-and-driving-ranges.aspx
+102;Fraserview Golf Course;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+103;Killarney Park;Playgrounds;2;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+103;Killarney Park;Field Houses;1;
+109;Delamont Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+114;McBride Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+126;Oak Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+126;Oak Park;Outdoor Roller Hockey Rinks;1;
+128;Shannon Park;Field Houses;1;
+131;Winona Park;Softball;1;
+131;Winona Park;Ultimate Fields;3;
+133;China Creek North Park;Jogging Trails;1;
+139;Mount Pleasant Park;Basketball Courts;1;
+140;Robson Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+141;Tea Swamp Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+145;Langara Golf Course;Jogging Trails;1;
+151;Collingwood Park;Field Houses;1;
+151;Collingwood Park;Basketball Courts;1;
+153;Falaise Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+153;Falaise Park;Wading Pool;1;
+154;Foster Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+158;Price Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+159;Renfrew Community Park;Field Houses;1;
+159;Renfrew Community Park;Lacrosse Boxes;1;
+167;Queen Elizabeth Park;Outdoor Roller Hockey Rinks;2;
+168;Riley Park;Soccer Fields;1;
+171;Kerrisdale Park;Rinks;1;http://vancouver.ca/parks-recreation-culture/ice-rinks.aspx
+175;Douglas Park;Soccer Fields;3;
+177;Heather Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+177;Heather Park;Tennis Courts;4;
+180;Oppenheimer Park;Field Houses;1;
+181;Strathcona Park;Tennis Courts;4;
+184;George Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+184;George Park;Ultimate Fields;1;
+185;MacDonald Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+186;Memorial South Park;Cricket Pitches;1;
+186;Memorial South Park;Tennis Courts;4;
+187;Moberly Park;Soccer Fields;2;
+188;Ross Park;Field Houses;1;
+188;Ross Park;Wading Pool;1;
+188;Ross Park;Softball;1;
+191;Bobolink Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+191;Bobolink Park;Softball;4;
+191;Bobolink Park;Soccer Fields;2;
+194;Gordon Park;Rugby Fields;2;
+194;Gordon Park;Softball;4;
+194;Gordon Park;Soccer Fields;1;
+195;Humm Park;Tennis Courts;2;
+195;Humm Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+196;Nanaimo Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+196;Nanaimo Park;Wading Pool;1;
+197;Riverfront Park;Picnic Sites;1;http://vancouver.ca/parks-recreation-culture/picnics.aspx
+197;Riverfront Park;Playgrounds;2;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+197;Riverfront Park;Basketball Courts;1;
+198;Tecumseh Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+201;English Bay Beach Park;Beaches;1;http://vancouver.ca/parks-recreation-culture/beaches.aspx
+203;Nelson Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+206;Stanley Park;Golf Courses;1;http://vancouver.ca/parks-recreation-culture/golf-courses-pitch-and-putts-and-driving-ranges.aspx
+206;Stanley Park;Cricket Pitches;2;
+206;Stanley Park;Field Houses;3;
+206;Stanley Park;Lighted Fields;1;
+206;Stanley Park;Playgrounds;4;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+206;Stanley Park;Rugby Fields;2;
+206;Stanley Park;Picnic Sites;1;http://vancouver.ca/parks-recreation-culture/picnics.aspx
+206;Stanley Park;Water/Spray Parks;1;
+206;Stanley Park;Jogging Trails;3;
+207;Sunset Beach Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+207;Sunset Beach Park;Food Concessions;1;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+218;Jericho Beach Park;Picnic Sites;1;http://vancouver.ca/parks-recreation-culture/picnics.aspx
+218;Jericho Beach Park;Soccer Fields;3;
+218;Jericho Beach Park;Beaches;1;http://vancouver.ca/parks-recreation-culture/beaches.aspx
+218;Jericho Beach Park;Food Concessions;1;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+219;Locarno Park;Picnic Sites;1;http://vancouver.ca/parks-recreation-culture/picnics.aspx
+219;Locarno Park;Food Concessions;1;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+220;Spanish Banks Beach Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+220;Spanish Banks Beach Park;Food Concessions;2;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+221;West Point Grey Park;Bowling Greens;2;
+221;West Point Grey Park;Field Houses;1;
+221;West Point Grey Park;Wading Pool;1;
+228;Oak Meadows Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+228;Oak Meadows Park;Soccer Fields;1;
+245;Trillium Park;Soccer Fields;2;
+245;Trillium Park;Field Hockey;2;
+1;Arbutus Village Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+2;Carnarvon Park;Field Houses;1;
+6;Quilchena Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+10;Andy Livingstone Park;Football Fields;1;
+14;Coopers' Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+16;David Lam Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+28;CRAB Park at Portside;Field Houses;1;
+28;CRAB Park at Portside;Playgrounds;2;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+39;Memorial West Park;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+43;Charleson Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+51;Garden Park;Tennis Courts;2;
+51;Garden Park;Soccer Fields;1;
+54;McSpadden Park;Soccer Fields;1;
+57;Pandora Park;Field Houses;1;
+67;Burrard View Park;Field Houses;1;
+67;Burrard View Park;Tennis Courts;2;
+70;Clinton Park;Lighted Fields;1;
+74;Kaslo Park;Tennis Courts;2;
+75;New Brighton Park;Field Houses;1;
+77;Sunrise Park;Baseball Diamonds;1;
+77;Sunrise Park;Soccer Fields;1;
+79;Brewers Park;Tennis Courts;2;
+79;Brewers Park;Ball Hockey;1;
+80;Cedar Cottage Park;Playgrounds;2;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+85;John Hendry (Trout Lake) Park;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+85;John Hendry (Trout Lake) Park;Rinks;1;http://vancouver.ca/parks-recreation-culture/ice-rinks.aspx
+85;John Hendry (Trout Lake) Park;Jogging Trails;1;
+85;John Hendry (Trout Lake) Park;Food Concessions;1;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+85;John Hendry (Trout Lake) Park;Ball Hockey;1;
+87;Kensington Park;Skateboard Parks;1;http://vancouver.ca/parks-recreation-culture/skateboard-parks.aspx
+101;Everett Crowley Park;Dogs Off-Leash Areas;1;http://vancouver.ca/parks-recreation-culture/dog-off-leash-areas.aspx
+103;Killarney Park;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+103;Killarney Park;Lighted Fields;2;
+103;Killarney Park;Soccer Fields;3;
+103;Killarney Park;Ultimate Fields;1;
+106;Almond Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+108;Connaught Park;Lighted Fields;1;
+112;Kitsilano Beach Park;Swimming Pools;1;http://vancouver.ca/parks-recreation-culture/swimming-pools.aspx
+114;McBride Park;Soccer Fields;1;
+119;Tatlow Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+122;Ash Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+126;Oak Park;Community Centres;1;http://vancouver.ca/parks-recreation-culture/community-and-cultural-centres.aspx
+126;Oak Park;Soccer Fields;3;
+126;Oak Park;Softball;2;
+133;China Creek North Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+136;Guelph Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+137;Jonathan Rogers Park;Field Houses;1;
+137;Jonathan Rogers Park;Soccer Fields;1;
+139;Mount Pleasant Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+140;Robson Park;Soccer Fields;1;
+145;Langara Golf Course;Restaurants;1;http://vancouver.ca/parks-recreation-culture/restaurants-and-snack-bars.aspx
+146;Montgomery Park;Softball;3;
+148;Beaconsfield Park;Field Hockey;1;
+153;Falaise Park;Baseball Diamonds;2;
+153;Falaise Park;Playgrounds;2;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+153;Falaise Park;Field Houses;1;
+155;Gaston Park;Softball;1;
+157;Norquay Park;Soccer Fields;1;
+164;Hillcrest Park;Field Houses;1;
+164;Hillcrest Park;Swimming Pools;1;http://vancouver.ca/parks-recreation-culture/swimming-pools.aspx
+165;Nat Bailey Stadium;Baseball Diamonds;1;
+165;Nat Bailey Stadium;Lighted Fields;1;
+166;Prince Edward Park;Soccer Fields;1;
+168;Riley Park;Basketball Courts;1;
+171;Kerrisdale Park;Baseball Diamonds;2;
+171;Kerrisdale Park;Running Tracks;1;
+174;Braemar Park;Softball;1;
+177;Heather Park;Lighted Fields;1;
+179;MacLean Park;Field Houses;1;
+180;Oppenheimer Park;Picnic Sites;1;http://vancouver.ca/parks-recreation-culture/picnics.aspx
+181;Strathcona Park;Field Houses;1;
+181;Strathcona Park;Playgrounds;1;http://vancouver.ca/parks-recreation-culture/summer-playground-programs.aspx
+181;Strathcona Park;Soccer Fields;4;
