@@ -28,7 +28,7 @@ SOFTWARE.
 
 ## Non-Software Content License (CC BY 4.0)
 
-The non-software content of this project, including documentation, text, images, and datasets, is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+The non-software content of this project, including documentation, text, images, and datasets (except for datasets from Open Data Vancouver), is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
 ### You are free to:
 - Share — copy and redistribute the material in any medium or format
@@ -37,3 +37,15 @@ The non-software content of this project, including documentation, text, images,
 ### Under the following terms:
 - Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner but not in any way that suggests the licensor endorses you or your use.
 
+---
+
+## Data Attribution (Open Data Vancouver)
+
+This project includes datasets obtained from the [Open Data Vancouver portal](https://opendata.vancouver.ca/), used in accordance with the [Open Government Licence – Vancouver](https://opendata.vancouver.ca/pages/licence/).
+
+Under this license, you are free to:
+- Copy, modify, publish, translate, adapt, distribute, or otherwise use the data, in any medium, mode, or format for any lawful purpose.
+
+### Attribution Requirements:
+- You must acknowledge the source of the data by including the following statement:  
+  > "Contains information licensed under the Open Government Licence – Vancouver."
