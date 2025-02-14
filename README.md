@@ -1,2 +1,2 @@
-# DSCI-532-2025-02-vanparks_finder
-This is a dashboard for finding parks in Vancouver, made using dash in Python.
+# Vanparks Finder
+Vanparks Finder is a dashboard built to help Vancouver park enthusiasts quickly find the perfect green space that meets their needs. It visualizes data on 216 parks (ongoing update), allowing users to filter by features such as washroom avalibilities, facilities and special features. By streamlining the search process, we encourage greater park usage, healthier lifestyles, and stronger local communities.
