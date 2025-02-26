@@ -88,6 +88,14 @@ app.layout = dbc.Container(fluid=True, children=[
                 clearable=True,
                 style={"margin-bottom": "20px"}
             ),
+            html.Label("Washroom Avaliability"),
+            dcc.Checklist(
+                id="washrooms-checkbox",
+                options=[{"label": "  Yes ", "value": "Y"}],
+                value=[],  # Default: unchecked (show all parks)
+                inline=True,
+                style={"margin-bottom": "20px"}
+            )
         ]),
 
         # Right Column: Map
@@ -118,9 +126,10 @@ app.layout = dbc.Container(fluid=True, children=[
     Output("vancouver-map", "children"),
     Input("neighbourhood-dropdown", "value"),
     Input("facility-dropdown", "value"),
-    Input("special-feature-dropdown", "value")
+    Input("special-feature-dropdown", "value"),
+    Input("washrooms-checkbox", "value")
 )
-def update_map(selected_neighbourhood, selected_facilities, selected_special_features):
+def update_map(selected_neighbourhood, selected_facilities, selected_special_features, washroom_filter):
     # Instead of interesecting, this function is currently adding parkID for filtering. 
     # For example: user input 2 features, instead of filtering out the park with both features, the callback is outputting park with feature 1 or feature 2
     # Same for facilities
@@ -129,7 +138,11 @@ def update_map(selected_neighbourhood, selected_facilities, selected_special_fea
     # Filter by neighbourhood
     if selected_neighbourhood:
         df_filtered = df_filtered[df_filtered["NeighbourhoodName"] == selected_neighbourhood]
-    
+
+    # Filter by washroom avaliability
+    if "Y" in washroom_filter:  
+        df_filtered = df_filtered[df_filtered["Washrooms"] == "Y"]
+
     park_ids = set(df_filtered["ParkID"])
     # Filter by facility types
     if selected_facilities:
