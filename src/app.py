@@ -10,7 +10,7 @@ app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 parks_data = pd.read_csv('../data/raw/parks.csv', delimiter =';')
 facilities_data = pd.read_csv('../data/raw/parks-facilities.csv', delimiter=';')
 special_data = pd.read_csv('../data/raw/parks-special-features.csv', delimiter=';')
-
+park_ids = set()
 parks_data['Coordinates'] = parks_data['GoogleMapDest'].apply(ast.literal_eval)
 
 parks_data[['Latitude', 'Longitude']] = pd.DataFrame(parks_data['Coordinates'].to_list(), index=parks_data.index)
@@ -100,7 +100,7 @@ app.layout = dbc.Container(fluid=True, children=[
                 id="vancouver-map",
                 center=[49.2827, -123.1207], 
                 zoom=12,
-                style={'height': '70vh'},
+                style={'height': '70vh'}, # This is controling the height of the map
                 maxZoom=18,
                 minZoom=12,
                 maxBounds=[[49.1, -123.3], [49.5, -122.7]],
@@ -109,7 +109,10 @@ app.layout = dbc.Container(fluid=True, children=[
             )
         ])
     ])
-])
+    
+],
+    style={"padding": "20px"} # This is controling the page style
+    )
 
 @app.callback(
     Output("vancouver-map", "children"),
@@ -118,29 +121,30 @@ app.layout = dbc.Container(fluid=True, children=[
     Input("special-feature-dropdown", "value")
 )
 def update_map(selected_neighbourhood, selected_facilities, selected_special_features):
+    # Instead of interesecting, this function is currently adding parkID for filtering. 
+    # For example: user input 2 features, instead of filtering out the park with both features, the callback is outputting park with feature 1 or feature 2
+    # Same for facilities
     df_filtered = parks_data.copy()
 
     # Filter by neighbourhood
     if selected_neighbourhood:
         df_filtered = df_filtered[df_filtered["NeighbourhoodName"] == selected_neighbourhood]
-
+    
+    park_ids = set(df_filtered["ParkID"])
     # Filter by facility types
     if selected_facilities:
-        # Find all parkIDs having the chosen facilities
-        matching_facilities = facilities_data[facilities_data["FacilityType"].isin(selected_facilities)]
-        park_ids_with_facilities = set(matching_facilities["ParkID"])
-        # Filter df by these parkIDs
-        df_filtered = df_filtered[df_filtered["ParkID"].isin(park_ids_with_facilities)]
+        matching_facilities = set(facilities_data.loc[facilities_data["FacilityType"].isin(selected_facilities), "ParkID"])
+        park_ids &= matching_facilities  # Keep only matching park IDs
 
-    # Filter by special features
     if selected_special_features:
-        # Find all parkIDs having the chosen special features
-        matching_specials = special_data[special_data["SpecialFeature"].isin(selected_special_features)]
-        park_ids_with_specials = set(matching_specials["ParkID"])
-        # Filter df by these parkIDs
-        df_filtered = df_filtered[df_filtered["ParkID"].isin(park_ids_with_specials)]
+        matching_specials = set(special_data.loc[special_data["SpecialFeature"].isin(selected_special_features), "ParkID"])
+        park_ids &= matching_specials  # Keep only matching park IDs
+
+    # Apply the final filter once
+    df_filtered = df_filtered[df_filtered["ParkID"].isin(park_ids)]
 
     # df_filtered will become a parks df with only parkID filtered
+    # The variable parks_ids contains all the filtered ParkID, you can use it for the rest of the work.
 
     # Create markers for the filtered parks
     markers = []
@@ -152,6 +156,7 @@ def update_map(selected_neighbourhood, selected_facilities, selected_special_fea
         markers.append(marker)
 
     return [dl.TileLayer()] + markers
+
 
 if __name__ == '__main__':
     app.server.run(debug=True, port=8000, host='127.0.0.1')
