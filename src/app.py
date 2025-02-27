@@ -157,15 +157,13 @@ app.layout = dbc.Container(fluid=True, children=[
     Input("washrooms-checkbox", "value")
 )
 def update_map(selected_neighbourhood, selected_facilities, selected_special_features, washroom_filter):
-    # Instead of interesecting, this function is currently adding parkID for filtering. 
-    # For example: user input 2 features, instead of filtering out the park with both features, the callback is outputting park with feature 1 or feature 2
-    # Same for facilities
     df_filtered = parks_data.copy()
+    
     # Filter by neighbourhood
     if selected_neighbourhood:
         df_filtered = df_filtered[df_filtered["NeighbourhoodName"] == selected_neighbourhood]
 
-    # Filter by washroom avaliability
+    # Filter by washroom availability
     if washroom_filter is None:
         washroom_filter = []
     
@@ -173,15 +171,22 @@ def update_map(selected_neighbourhood, selected_facilities, selected_special_fea
         df_filtered = df_filtered[df_filtered["Washrooms"] == "Y"]
 
     park_ids = set(df_filtered["ParkID"])
-    # Filter by facility types
+
+    # Ensure parks contain *all* selected facilities
     if selected_facilities:
-        matching_facilities = set(facilities_data.loc[facilities_data["FacilityType"].isin(selected_facilities), "ParkID"])
+        facility_counts = facilities_data[facilities_data["FacilityType"].isin(selected_facilities)]
+        facility_counts = facility_counts.groupby("ParkID")["FacilityType"].nunique()
+        matching_facilities = set(facility_counts[facility_counts == len(selected_facilities)].index)
         park_ids &= matching_facilities if park_ids else matching_facilities  
-    
+
+    # Ensure parks contain *all* selected special features
     if selected_special_features:
-        matching_specials = set(special_data.loc[special_data["SpecialFeature"].isin(selected_special_features), "ParkID"])
+        special_counts = special_data[special_data["SpecialFeature"].isin(selected_special_features)]
+        special_counts = special_counts.groupby("ParkID")["SpecialFeature"].nunique()
+        matching_specials = set(special_counts[special_counts == len(selected_special_features)].index)
         park_ids &= matching_specials if park_ids else matching_specials  
-    # Apply the final filter once
+
+    # Apply the final filter
     df_filtered = df_filtered[df_filtered["ParkID"].isin(park_ids)]
 
     num_parks_filtered = df_filtered["ParkID"].nunique()
