@@ -1,6 +1,8 @@
 from dash import Dash, html, dcc, Input, Output, callback,callback_context
 from dash.dependencies import ALL
 import dash_bootstrap_components as dbc
+import altair as alt
+import dash_vega_components as dvc
 import dash_leaflet as dl
 import pandas as pd
 import ast
@@ -68,6 +70,32 @@ park_info_modal = dbc.Modal(
     size="lg", 
 )
 
+def create_bar_chart(data):
+    parks_chart_filter = data.groupby("FacilityType").sum().reset_index()[["FacilityType", "FacilityCount"]]
+    parks_chart_filter = parks_chart_filter.sort_values(by="FacilityCount", ascending=False)[:5]
+    alt.theme.enable("fivethirtyeight")
+
+    chart = alt.Chart(parks_chart_filter).mark_bar().encode(
+        x='FacilityCount',
+        y=alt.Y('FacilityType:N').sort('-x'),
+        color=alt.Color('FacilityType', legend=None),
+        tooltip = ['FacilityType','FacilityCount']
+    ).configure(
+        background="transparent",
+    ).configure_axis(
+        labelColor= "black",
+        titleColor= "grey",
+        labelFontSize=12,
+        titleFontSize=12
+    ).properties(
+        title="Top 5 Facilities"
+    ).configure_title(
+        font='Verdana',
+        fontSize=16,
+        anchor='start',
+    )
+
+    return chart.to_dict()
 
 # Define the layout with a map centered on Vancouver
 app.layout = dbc.Container(fluid=True, children=[
@@ -134,7 +162,10 @@ app.layout = dbc.Container(fluid=True, children=[
                 maxBounds=[[49.1, -123.3], [49.5, -122.7]],
                 dragging=True,
                 zoomControl=True
-            )
+            ),
+            dvc.Vega(id="bar-chart", 
+                     spec=create_bar_chart(facilities_data),
+                     style={'width': '70%'})
         ]),
          dbc.Col(width=3, children=[
             park_info_modal,
@@ -142,7 +173,6 @@ app.layout = dbc.Container(fluid=True, children=[
             num_parks_card
         ])
     ]),
-    park_info_modal 
 ],
     style={"padding": "20px"} # This is controling the page style
     )
@@ -196,6 +226,49 @@ def update_map(selected_neighbourhood, selected_facilities, selected_special_fea
     avg_hectare_text = f"{avg_hectare_filtered:.2f}" if not df_filtered.empty else "0.00"
 
     return [dl.TileLayer()] + create_markers(df_filtered) if not df_filtered.empty else [dl.TileLayer()], num_parks_text, avg_hectare_text
+
+@app.callback(
+    Output("bar-chart", "spec"),
+    Input("neighbourhood-dropdown", "value"),
+    Input("facility-dropdown", "value"),
+    Input("special-feature-dropdown", "value"),
+    Input("washrooms-checkbox", "value")
+)
+def update_bar_chart(selected_neighbourhood, selected_facilities, selected_special_features, washroom_filter):
+    df_filtered = parks_data.copy()
+
+    # Filter by neighbourhood
+    if selected_neighbourhood:
+        df_filtered = df_filtered[df_filtered["NeighbourhoodName"] == selected_neighbourhood]
+
+    # Filter by washroom availability
+    if washroom_filter is None:
+        washroom_filter = []
+    
+    if "Y" in washroom_filter:
+        df_filtered = df_filtered[df_filtered["Washrooms"] == "Y"]
+
+    park_ids = set(df_filtered["ParkID"])
+
+    # Ensure parks contain *all* selected facilities
+    if selected_facilities:
+        facility_counts = facilities_data[facilities_data["FacilityType"].isin(selected_facilities)]
+        facility_counts = facility_counts.groupby("ParkID")["FacilityType"].nunique()
+        matching_facilities = set(facility_counts[facility_counts == len(selected_facilities)].index)
+        park_ids &= matching_facilities if park_ids else matching_facilities  
+
+    # Ensure parks contain *all* selected special features
+    if selected_special_features:
+        special_counts = special_data[special_data["SpecialFeature"].isin(selected_special_features)]
+        special_counts = special_counts.groupby("ParkID")["SpecialFeature"].nunique()
+        matching_specials = set(special_counts[special_counts == len(selected_special_features)].index)
+        park_ids &= matching_specials if park_ids else matching_specials  
+
+    # Only filter for specific ParkIDs
+    facilities_data_new = facilities_data[facilities_data["ParkID"].isin(park_ids)]
+
+    # Update Chart
+    return create_bar_chart(facilities_data_new)
 
 @app.callback(
     Output("park-info", "children"),
