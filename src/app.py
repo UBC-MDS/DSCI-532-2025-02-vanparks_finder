@@ -55,13 +55,19 @@ num_parks_card = dbc.Card(
     className="mt-4"
 )
 
-park_info_card = dbc.Card(
-    dbc.CardBody([
-        html.H4("Selected Park", className="card-title"),
-        html.Div("Click on a park to see details.", id="park-info", className="card-text")
-    ]),
-    className="mt-4"
+park_info_modal = dbc.Modal(
+    id="park-info-modal",
+    children=[
+        dbc.ModalHeader("Selected Park Details"),
+        dbc.ModalBody(id="park-info"),
+        dbc.ModalFooter(
+            dbc.Button("Close", id="close-park-modal", className="ml-auto", n_clicks=0)
+        ),
+    ],
+    is_open=False,  
+    size="lg", 
 )
+
 
 # Define the layout with a map centered on Vancouver
 app.layout = dbc.Container(fluid=True, children=[
@@ -131,12 +137,12 @@ app.layout = dbc.Container(fluid=True, children=[
             )
         ]),
          dbc.Col(width=3, children=[
-            park_info_card,
+            park_info_modal,
             avg_hectare_card,
             num_parks_card
         ])
-    ])
-    
+    ]),
+    park_info_modal 
 ],
     style={"padding": "20px"} # This is controling the page style
     )
@@ -188,25 +194,31 @@ def update_map(selected_neighbourhood, selected_facilities, selected_special_fea
 
 @app.callback(
     Output("park-info", "children"),
-    Input({'type': 'park-marker', 'index': ALL}, "n_clicks")
+    Output("park-info-modal", "is_open"),
+    Input({'type': 'park-marker', 'index': ALL}, "n_clicks"),
+    Input("close-park-modal", "n_clicks"),
+    prevent_initial_call=True
 )
-
-def update_park_info(n_clicks):
+def update_park_info(n_clicks, close_click):
     ctx = callback_context
 
-    if not ctx.triggered or not n_clicks or all(n is None or n == 0 for n in n_clicks):
-        return "Click on a park to see details."
+    if ctx.triggered[0]["prop_id"] == "close-park-modal.n_clicks":
+        return "", False
+
+    if not ctx.triggered or not any(n_clicks):  
+        return "Click on a park to see details.", False
+
+    triggered_id = ctx.triggered[0]["prop_id"].split(".")[0]
 
     try:
-        triggered_id = ast.literal_eval(ctx.triggered[0]['prop_id'].split('.')[0])
-        park_id = triggered_id['index']
-    except Exception as e:
-        return f"Error parsing park selection: {e}"
+        park_id = ast.literal_eval(triggered_id)["index"]
+    except Exception:
+        return "Error parsing park selection.", False
 
-    if park_id not in parks_data['ParkID'].values:
-        return "Selected park not found."
+    if park_id not in parks_data["ParkID"].values:
+        return "Selected park not found.", True
 
-    park = parks_data[parks_data['ParkID'] == park_id].iloc[0]
+    park = parks_data[parks_data["ParkID"] == park_id].iloc[0]
 
     return html.Div([
         html.B("Name: "), f"{park['Name']}", html.Br(),
@@ -215,7 +227,8 @@ def update_park_info(n_clicks):
         html.B("Neighbourhood: "), f"{park['NeighbourhoodName']}", html.Br(),
         html.B("Hectare: "), f"{park['Hectare']:.2f}", html.Br(),
         html.B("Washroom: "), f"{park['Washrooms']}"
-    ])
+    ]), True  
+
 
 if __name__ == '__main__':
     app.server.run(debug=True, port=8000, host='127.0.0.1')
