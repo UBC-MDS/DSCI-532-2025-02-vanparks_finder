@@ -38,13 +38,11 @@ def create_markers(df):
         )
         for _, row in df.iterrows()
     ]
-num_parks = parks_data['ParkID'].nunique()
-avg_hectare = parks_data['Hectare'].mean()
 
 avg_hectare_card = dbc.Card(
     dbc.CardBody([
         html.H5("Average Hectare per Park:", className="card-title"),
-        html.H2(f"{avg_hectare:.2f}", className="card-text text-center")
+        html.H2(id="avg-hectare-text", className="card-text text-center")
     ]),
     className="mt-4"
 )
@@ -52,7 +50,7 @@ avg_hectare_card = dbc.Card(
 num_parks_card = dbc.Card(
     dbc.CardBody([
         html.H5("Number of Parks:", className="card-title"),
-        html.H2(f"{num_parks}", className="card-text text-center")
+        html.H2(id="num-parks-text", className="card-text text-center")
     ]),
     className="mt-4"
 )
@@ -145,6 +143,8 @@ app.layout = dbc.Container(fluid=True, children=[
 
 @app.callback(
     Output("vancouver-map", "children"),
+    Output("num-parks-text", "children"),
+    Output("avg-hectare-text", "children"),
     Input("neighbourhood-dropdown", "value"),
     Input("facility-dropdown", "value"),
     Input("special-feature-dropdown", "value"),
@@ -175,17 +175,17 @@ def update_map(selected_neighbourhood, selected_facilities, selected_special_fea
     if selected_special_features:
         matching_specials = set(special_data.loc[special_data["SpecialFeature"].isin(selected_special_features), "ParkID"])
         park_ids &= matching_specials if park_ids else matching_specials  
- # Keep only matching park IDs
-
     # Apply the final filter once
     df_filtered = df_filtered[df_filtered["ParkID"].isin(park_ids)]
 
-    return [dl.TileLayer()] + create_markers(df_filtered) if not df_filtered.empty else [dl.TileLayer()]
+    num_parks_filtered = df_filtered["ParkID"].nunique()
+    avg_hectare_filtered = df_filtered["Hectare"].mean()
 
-    # df_filtered will become a parks df with only parkID filtered
-    # The variable parks_ids contains all the filtered ParkID, you can use it for the rest of the work.
+    num_parks_text = str(num_parks_filtered) if num_parks_filtered > 0 else "0"
+    avg_hectare_text = f"{avg_hectare_filtered:.2f}" if not df_filtered.empty else "0.00"
 
-    # Create markers for the filtered parks
+    return [dl.TileLayer()] + create_markers(df_filtered) if not df_filtered.empty else [dl.TileLayer()], num_parks_text, avg_hectare_text
+
 @app.callback(
     Output("park-info", "children"),
     Input({'type': 'park-marker', 'index': ALL}, "n_clicks")
