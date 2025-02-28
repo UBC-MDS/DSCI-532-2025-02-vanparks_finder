@@ -1,4 +1,4 @@
-python==3.11
+python==3.11.*
 pandas==2.2.3
 ipykernel==6.29.5
 altair-all==5.5.0
