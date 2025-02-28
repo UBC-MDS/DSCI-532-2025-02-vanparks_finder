@@ -309,4 +309,4 @@ def update_park_info(n_clicks, close_click):
 
 
 if __name__ == '__main__':
-    app.server.run(debug=True, port=8000, host='127.0.0.1')
+    app.server.run(debug=False, port=8000, host='127.0.0.1')
