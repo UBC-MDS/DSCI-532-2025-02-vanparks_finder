@@ -52,7 +52,8 @@ avg_hectare_card = dbc.Card(
 num_parks_card = dbc.Card(
     dbc.CardBody([
         html.H5("Number of Parks:", className="card-title"),
-        html.H2(id="num-parks-text", className="card-text text-center")
+        html.H2(id="num-parks-text", className="card-text text-center"),
+        
     ]),
     className="mt-4"
 )
@@ -157,7 +158,7 @@ app.layout = dbc.Container(fluid=True, children=[
     dbc.Row([
         # Left Column: Filters
         dbc.Col(width=3, children=[
-        html.H1("Vancouver Parks Map"),
+        html.H1("Vanparks Finder"),
         html.Label("Neighbourhood Name"),
         neighbourhood_dropdown,
         html.Label("Facility Type"),
@@ -165,19 +166,23 @@ app.layout = dbc.Container(fluid=True, children=[
         html.Label("Special Feature"),
         special_feature_dropdown,
         html.Label("Washroom Availability"),
-        washrooms_checkbox
+        washrooms_checkbox,
+        park_info_modal,
+        avg_hectare_card,
+        num_parks_card,
         ]),
 
         # Right Column: Map
-        dbc.Col(width=6, children=[
+        dbc.Col(width=9, children=[
             park_map,
             bar_chart
+            
         ]),
-         dbc.Col(width=3, children=[
-            park_info_modal,
-            avg_hectare_card,
-            num_parks_card
-        ])
+        #  dbc.Col(width=3, children=[
+           
+
+            
+        # ])
     ]),
 ],
     style={"padding": "20px"} # This is controling the page style
