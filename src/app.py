@@ -69,6 +69,55 @@ park_info_modal = dbc.Modal(
     is_open=False,  
     size="lg", 
 )
+neighbourhood_dropdown = dcc.Dropdown(
+    id="neighbourhood-dropdown",
+    options=neighborhood_options,
+    value=None,
+    placeholder="Select a neighbourhood...",
+    multi=False,
+    clearable=True,
+    searchable=True,
+    style={"margin-bottom": "20px"}
+)
+facility_dropdown = dcc.Dropdown(
+    id="facility-dropdown",
+    options=facility_options,
+    value=[],
+    placeholder="Select facility type(s)...",
+    multi=True,
+    clearable=True,
+    style={"margin-bottom": "20px"}
+)
+
+special_feature_dropdown = dcc.Dropdown(
+    id="special-feature-dropdown",
+    options=special_features_options,
+    value=[],
+    placeholder="Select special feature(s)...",
+    multi=True,
+    clearable=True,
+    style={"margin-bottom": "20px"}
+)
+
+washrooms_checkbox = dcc.Checklist(
+    id="washrooms-checkbox",
+    options=[{"label": "  Yes ", "value": "Y"}],
+    value=[],
+    inline=True,
+    style={"margin-bottom": "20px"}
+)
+park_map = dl.Map(
+    children=[dl.TileLayer()],
+    id="vancouver-map",
+    center=[49.2827, -123.1207],
+    zoom=12,
+    style={'height': '70vh'},
+    maxZoom=18,
+    minZoom=12,
+    maxBounds=[[49.1, -123.3], [49.5, -122.7]],
+    dragging=True,
+    zoomControl=True
+)
 
 def create_bar_chart(data):
     parks_chart_filter = data.groupby("FacilityType").sum().reset_index()[["FacilityType", "FacilityCount"]]
@@ -97,75 +146,32 @@ def create_bar_chart(data):
 
     return chart.to_dict()
 
+bar_chart = dvc.Vega(
+    id="bar-chart",
+    spec=create_bar_chart(facilities_data),
+    style={'width': '70%'}
+)
+
 # Define the layout with a map centered on Vancouver
 app.layout = dbc.Container(fluid=True, children=[
     dbc.Row([
         # Left Column: Filters
         dbc.Col(width=3, children=[
-            html.H1("Vancouver Parks Map"),
-            html.Label("Neighbourhood Name"),
-            dcc.Dropdown(
-                id="neighbourhood-dropdown",
-                options=neighborhood_options,
-                value=None,             # No default selection
-                placeholder="Select a neighbourhood...",
-                multi=False,           # Single selection
-                clearable=True,
-                searchable=True,       # Allows search in the dropdown
-                style={"margin-bottom": "20px"}
-            ),
-
-            html.Label("Facility Type"),
-            dcc.Dropdown(
-                id="facility-dropdown",
-                options=facility_options,
-                value=[],              # No default selection
-                placeholder="Select facility type(s)...",
-                multi=True,           # Multi selection
-                clearable=True,
-                style={"margin-bottom": "20px"}
-            ),
-
-            html.Label("Special Feature"),
-            dcc.Dropdown(
-                id="special-feature-dropdown",
-                options=special_features_options,
-                value=[],              # No default selection
-                placeholder="Select special feature(s)...",
-                multi=True,           # Multi selection
-                clearable=True,
-                style={"margin-bottom": "20px"}
-            ),
-            html.Label("Washroom Avaliability"),
-            dcc.Checklist(
-                id="washrooms-checkbox",
-                options=[{"label": "  Yes ", "value": "Y"}],
-                value=[],  # Default: unchecked (show all parks)
-                inline=True,
-                style={"margin-bottom": "20px"}
-            )
+        html.H1("Vancouver Parks Map"),
+        html.Label("Neighbourhood Name"),
+        neighbourhood_dropdown,
+        html.Label("Facility Type"),
+        facility_dropdown,
+        html.Label("Special Feature"),
+        special_feature_dropdown,
+        html.Label("Washroom Availability"),
+        washrooms_checkbox
         ]),
 
         # Right Column: Map
         dbc.Col(width=6, children=[
-
-            dl.Map(
-                children=[
-                    dl.TileLayer()
-                    ],
-                id="vancouver-map",
-                center=[49.2827, -123.1207], 
-                zoom=12,
-                style={'height': '70vh'}, # This is controling the height of the map
-                maxZoom=18,
-                minZoom=12,
-                maxBounds=[[49.1, -123.3], [49.5, -122.7]],
-                dragging=True,
-                zoomControl=True
-            ),
-            dvc.Vega(id="bar-chart", 
-                     spec=create_bar_chart(facilities_data),
-                     style={'width': '70%'})
+            park_map,
+            bar_chart
         ]),
          dbc.Col(width=3, children=[
             park_info_modal,
