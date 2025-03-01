@@ -126,7 +126,7 @@ def create_bar_chart(data):
     alt.theme.enable("fivethirtyeight")
 
     chart = alt.Chart(parks_chart_filter).mark_bar().encode(
-        x='FacilityCount',
+        x=alt.X('FacilityCount:Q').scale(nice=True).axis(format='d'),
         y=alt.Y('FacilityType:N').sort('-x'),
         color=alt.Color('FacilityType', legend=None),
         tooltip = ['FacilityType','FacilityCount']
@@ -136,11 +136,14 @@ def create_bar_chart(data):
         labelColor= "black",
         titleColor= "grey",
         labelFontSize=12,
-        titleFontSize=12
+        titleFontSize=12,
+        labelFontStyle='Helvetica'
     ).properties(
-        title="Top 5 Facilities"
+        title="Top 5 Facilities",
+        width=550,
+        height=80
     ).configure_title(
-        font='Verdana',
+        font='Helvetica',
         fontSize=16,
         anchor='start',
     )
@@ -150,7 +153,7 @@ def create_bar_chart(data):
 bar_chart = dvc.Vega(
     id="bar-chart",
     spec=create_bar_chart(facilities_data),
-    style={'width': '70%'}
+    style={'width': '100%'}
 )
 
 # Define the layout with a map centered on Vancouver
@@ -176,14 +179,19 @@ app.layout = dbc.Container(fluid=True, children=[
         dbc.Col(width=9, children=[
             park_map,
             bar_chart
-            
         ]),
         #  dbc.Col(width=3, children=[
-           
 
             
         # ])
     ]),
+    dbc.Row([
+        dcc.Markdown("""
+                    This dashboard was made to help park enthusiasts find parks suited to their preferences in Vancouver. Created by Inder Khera, Timothy Singh, Ximin Xu, Shengjia Yu.
+
+                    The GitHub Repo can be found [here.](https://github.com/UBC-MDS/DSCI-532-2025-02-vanparks_finder) Latest Deployment Date: 2025-02-28
+                    """)
+    ])
 ],
     style={"padding": "20px"} # This is controling the page style
     )
