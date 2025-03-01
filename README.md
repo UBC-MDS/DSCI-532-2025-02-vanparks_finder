@@ -15,13 +15,13 @@ Jump to a section below or scroll down to dive in:
 -   [What do we need?](#what-do-we-need)
 -   [How can you get involved?](#get-involved)
 
-## What are we doing? {#what-are-we-doing}
+## What are we doing? 
 
 ### The problem
 
 Did you know that there are over 216 parks in Vancouver?
 
-For park enthusiasts and recreation seekers in **Vancouver**, finding the **right park** that meets their specific needs—whether it’s **size, washrooms, or facilities**—can be a frustrating trial-and-error process. Visiting multiple locations just to check if a park fits their requirements **wastes time and effort**.
+For park enthusiasts in **Vancouver**, finding the **right park** that meets their specific needs—whether it’s **size, washrooms, or facilities**—can be a frustrating trial-and-error process. Visiting multiple locations just to check if a park fits their requirements **wastes time and effort**.
 
 ### The solution
 
@@ -35,44 +35,42 @@ The Vanparks Finder app will:
 
 -   Use the dashboard to find particular facilities and discover new green places.
 
-👉 [Click here to view the demo GIF](./img/demo.gif). Feel free to check out how the app works!!
-
 ### Try it out!
 
 -   Our dashboard is live! Click below to explore it:
-
 👉 [VanParks Finder Dashboard](https://dsci-532-2025-02-vanparks-finder.onrender.com/)
+👉 [Click here to view the demo GIF](./img/demo.gif). Feel free to check out how the app works!!
 
-## Who are we? {#who-are-we}
+## Who are we? 
 
 The contributors of the Vanparks Finder app - [Shengjia Yu](https://github.com/shengjiayuu), [Ximin Xu](https://github.com/davyxuximin), [Timothy Singh](https://github.com/SimplyTim) and [Inder Khera](https://github.com/InderKhera) - are students who are taking DSCI532 in the Master of Data Science at [UBC](https://www.ubc.ca/).
 
-## What do we need? {#what-do-we-need}
+## What do we need? 
 
 **You**! In whatever way you can help.
 
 We're looking for contributors to help make VanParks Finder even better. Whether you’re a developer, designer, data enthusiast, or just passionate about making Vancouver’s parks more accessible, there’s a place for you!
 
-## Get involved {#get-involved}
+## Get involved 
 
 Interested in contributing? Check out the [contributing guidelines](./CONTRIBUTING.md) before you start to contribute. Please note that this project is released with a [Code of Conduct](./CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
 
-Now, Follow the steps below to set up the project and start contributing：
+Now, Follow the steps below to set up the project and start contributing:
 
 **Step 1:** Clone the Repository:
 
-run the following command in your terminal or command line to clone the repository to your local machine:
+Run the following commands in your terminal to clone the repository to your local machine:
 
-```{bash}
+```bash
 git clone <https://github.com/UBC-MDS/DSCI-532-2025-02-vanparks_finder.git>
 cd <DSCI-532-2025-02-vanparks_finder>
 ```
 
 **Step 2:** Install dependencies using Conda
 
-If you are using Conda (e.g., Anaconda or Miniconda), run:
+If you are using Conda (such as Anaconda or Miniconda), run:
 
-```{bash}
+```bash
 conda env create -f environment.yml
 conda activate vanparks_finder
 ```
@@ -81,7 +79,7 @@ conda activate vanparks_finder
 
 After installing the dependencies, go to the `src` directory (assuming the main code is inside the `src/` folder) and run:
 
-```{bash}
+```bash
 python app.py
 ```
 
