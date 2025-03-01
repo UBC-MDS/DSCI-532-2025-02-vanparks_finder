@@ -1,0 +1,15 @@
+# Reflections
+
+Currently, our dashboard includes a Map of Vancouver allowing users to zoom in and out, as well as drag to move around. Movement is restricted within the bounds of Vancouver, with some buffer space around the Greater Vancouver area to ensure that users can navigate the map comfortably while keeping the focus on relevant locations.
+
+We have also implemented our Marker component, which places markers on the map for each Vancouver park found in our dataset. These markers help users quickly identify park locations. Clicking on a specific marker opens a pop-up displaying more information about the park, such as its address, total area (in hectares), and other relevant details.
+
+Furthermore, our dashboard features search/dropdown filters, enabling users to display only the markers for parks that match specific criteria. These filters include choosing a specific neighbourhood, available facilities (e.g., basketball courts, soccer fields, beaches), and special features (e.g., Hellenic Garden). Additionally, we have implemented a toggle filter for washroom availability, where when "Yes" is selected, only parks with washrooms will be displayed.
+
+In addition to filters, we have incorporated output metrics to provide users with key insights about the selected parks. Users can view the total number of parks remaining after applying filters, along with the average park size (in hectares) of the filtered parks. To further enhance data visualization, a bar plot displays the top five facilities based on the selected filters, along with their respective counts. This allows users to quickly identify which facilities are most common in their chosen parks.
+
+Although we have successfully implemented all dashboard components, some aspects differ from our initial design. Originally, filters were placed on the left and metrics on the right, but we found that this layout made the map too small. To improve usability, we moved the metrics to the left to maximize the map’s size. Additionally, rather than displaying map details in a fixed section on the right side, we opted for a pop-up format to save space while still providing relevant information when needed.
+
+While our map effectively allows users to find parks based on selected filters and view detailed park information, we have identified some limitations. One of the main issues is that our output metrics (park count, average park size, and top five facilities) are currently tied only to the selected filters. Ideally, these metrics should update dynamically based on the visible map area rather than remaining static. We aim to enhance our dashboard so that these metrics adjust as users zoom in, zoom out, or drag the map to focus on different locations.
+
+Another limitation is the park details pop-up. We would prefer this component to function as a sliding panel that appears from the right side of the dashboard when a park marker is clicked. When users click away, the panel would slide out of view. Implementing these enhancements would significantly improve the user experience by making the dashboard more responsive to user interactions. 
