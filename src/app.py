@@ -1,7 +1,7 @@
 from dash import Dash, html, dcc, callback_context
 import dash_bootstrap_components as dbc
 import dash_leaflet as dl
-from components import bar_chart, map
+from components import bar_chart, map, filter
 import callbacks
 import pandas as pd
 import ast
@@ -60,43 +60,6 @@ park_info_modal = dbc.Modal(
     is_open=False,  
     size="lg", 
 )
-neighbourhood_dropdown = dcc.Dropdown(
-    id="neighbourhood-dropdown",
-    options=neighborhood_options,
-    value=None,
-    placeholder="Select a neighbourhood...",
-    multi=False,
-    clearable=True,
-    searchable=True,
-    style={"margin-bottom": "20px"}
-)
-facility_dropdown = dcc.Dropdown(
-    id="facility-dropdown",
-    options=facility_options,
-    value=[],
-    placeholder="Select facility type(s)...",
-    multi=True,
-    clearable=True,
-    style={"margin-bottom": "20px"}
-)
-
-special_feature_dropdown = dcc.Dropdown(
-    id="special-feature-dropdown",
-    options=special_features_options,
-    value=[],
-    placeholder="Select special feature(s)...",
-    multi=True,
-    clearable=True,
-    style={"margin-bottom": "20px"}
-)
-
-washrooms_checkbox = dcc.Checklist(
-    id="washrooms-checkbox",
-    options=[{"label": "  Yes ", "value": "Y"}],
-    value=[],
-    inline=True,
-    style={"margin-bottom": "20px"}
-)
 park_map = dl.Map(
     children=[dl.TileLayer()],
     id="vancouver-map",
@@ -113,42 +76,30 @@ park_map = dl.Map(
 # Define the layout with a map centered on Vancouver
 app.layout = dbc.Container(fluid=True, children=[
     dbc.Row([
-        # Left Column: Filters
-        dbc.Col(width=3, children=[
-        html.H1("Vanparks Finder"),
-        html.Label("Neighbourhood Name"),
-        neighbourhood_dropdown,
-        html.Label("Facility Type"),
-        facility_dropdown,
-        html.Label("Special Feature"),
-        special_feature_dropdown,
-        html.Label("Washroom Availability"),
-        washrooms_checkbox,
-        park_info_modal,
-        avg_hectare_card,
-        num_parks_card,
-        ]),
+        # Left Column: Filters (imported from components/filters.py)
+        filter.create_filters(
+            neighborhood_options,
+            facility_options,
+            special_features_options
+        ),
 
-        # Right Column: Map
+        # Right Column: Map + Bar Chart
         dbc.Col(width=9, children=[
             park_map,
             bar_chart
         ]),
-        #  dbc.Col(width=3, children=[
-
-            
-        # ])
     ]),
     dbc.Row([
         dcc.Markdown("""
-                    This dashboard was made to help park enthusiasts find parks suited to their preferences in Vancouver. Created by Inder Khera, Timothy Singh, Ximin Xu, Shengjia Yu.
+            This dashboard was made to help park enthusiasts find parks suited to their preferences in Vancouver. 
+            Created by Inder Khera, Timothy Singh, Ximin Xu, Shengjia Yu.
 
-                    The GitHub Repo can be found [here.](https://github.com/UBC-MDS/DSCI-532-2025-02-vanparks_finder) Latest Deployment Date: 2025-02-28
-                    """)
+            The GitHub Repo can be found [here.](https://github.com/UBC-MDS/DSCI-532-2025-02-vanparks_finder) 
+            Latest Deployment Date: 2025-02-28
+        """)
     ])
-],
-    style={"padding": "20px"} # This is controling the page style
-    )
+], style={"padding": "20px"})
+
 
 @app.callback(
     Output("park-info", "children"),
