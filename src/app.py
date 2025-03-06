@@ -17,6 +17,32 @@ special_data = pd.read_csv('data/raw/parks-special-features.csv', delimiter=';')
 parks_data['Coordinates'] = parks_data['GoogleMapDest'].apply(ast.literal_eval)
 
 parks_data[['Latitude', 'Longitude']] = pd.DataFrame(parks_data['Coordinates'].to_list(), index=parks_data.index)
+
+geo_location_dict = {
+    'Arbutus-Ridge': {'zoom': 14.17, 'center': [49.2467288, -123.1594228]},
+    'Downtown': {'zoom': 14.54, 'center': [49.2790925, -123.1147099]},
+    'Dunbar-Southlands': {'zoom': 14.02, 'center': [49.2489659, -123.1860719]},
+    'Fairview': {'zoom': 14.37, 'center': [49.2654975, -123.1282056]},
+    'Grandview-Woodland': {'zoom': 13.91, 'center': [49.2759762, -123.0682878]},
+    'Hastings-Sunrise': {'zoom': 13, 'center': [49.2778156, -123.0422014]},
+    'Kensington-Cedar Cottage': {'zoom': 14.01, 'center': [49.2471833, -123.0769395]},
+    'Kerrisdale': {'zoom': 14, 'center': [49.225243, -123.16097]},
+    'Killarney': {'zoom': 13.78, 'center': [49.2180367, -123.0383941]},
+    'Kitsilano': {'zoom': 14.26, 'center': [49.2674605, -123.1642213]},
+    'Marpole': {'zoom': 14.46, 'center': [49.2104717, -123.130635]},
+    'Mount Pleasant': {'zoom': 14.63, 'center': [49.2647148, -123.0978001]},
+    'Oakridge': {'zoom': 14.01, 'center': [49.226586, -123.122330]},
+    'Renfrew-Collingwood': {'zoom': 13.81, 'center': [49.2483732, -123.0386256]},
+    'Riley Park': {'zoom': 14.28, 'center': [49.24452, -123.1020171]},
+    'Shaughnessy': {'zoom': 14.3, 'center': [49.2456008, -123.1415797]},
+    'South Cambie': {'zoom': 14.1, 'center': [49.246474, -123.121238]},
+    'Strathcona': {'zoom': 14.94, 'center': [49.2725961, -123.0887926]},
+    'Sunset': {'zoom': 14.08, 'center': [49.2188485, -123.0911351]},
+    'Victoria-Fraserview': {'zoom': 14.0, 'center': [49.222683, -123.062963]},
+    'West End': {'zoom': 14.71, 'center': [49.2853688, -123.1342539]},
+    'West Point Grey': {'zoom': 14, 'center': [49.266988, -123.202435]}
+}
+
 #dropdown options
 neighborhood_options = [
     {"label": nbhd, "value": nbhd}
@@ -198,6 +224,7 @@ app.layout = dbc.Container(fluid=True, children=[
 
 @app.callback(
     Output("vancouver-map", "children"),
+    Output("vancouver-map", "viewport"),
     Output("num-parks-text", "children"),
     Output("avg-hectare-text", "children"),
     Input("neighbourhood-dropdown", "value"),
@@ -208,9 +235,16 @@ app.layout = dbc.Container(fluid=True, children=[
 def update_map(selected_neighbourhood, selected_facilities, selected_special_features, washroom_filter):
     df_filtered = parks_data.copy()
     
+    # Default center and zoom
+    center = [49.2827, -123.1207]  # Default center (Vancouver)
+    zoom = 12  # Default zoom level
+
     # Filter by neighbourhood
     if selected_neighbourhood:
         df_filtered = df_filtered[df_filtered["NeighbourhoodName"] == selected_neighbourhood]
+        if selected_neighbourhood in geo_location_dict:
+            center = geo_location_dict[selected_neighbourhood]['center']
+            zoom = geo_location_dict[selected_neighbourhood]['zoom']
 
     # Filter by washroom availability
     if washroom_filter is None:
@@ -244,7 +278,12 @@ def update_map(selected_neighbourhood, selected_facilities, selected_special_fea
     num_parks_text = str(num_parks_filtered) if num_parks_filtered > 0 else "0"
     avg_hectare_text = f"{avg_hectare_filtered:.2f}" if not df_filtered.empty else "0.00"
 
-    return [dl.TileLayer()] + create_markers(df_filtered) if not df_filtered.empty else [dl.TileLayer()], num_parks_text, avg_hectare_text
+    return (
+        [dl.TileLayer()] + create_markers(df_filtered) if not df_filtered.empty else [dl.TileLayer()],
+        {"center": center, "zoom": zoom, "transition": "flyTo"},
+        num_parks_text,
+        avg_hectare_text
+    )
 
 @app.callback(
     Output("bar-chart", "spec"),
@@ -328,4 +367,4 @@ def update_park_info(n_clicks, close_click):
 
 
 if __name__ == '__main__':
-    app.server.run(debug=False, port=8000, host='127.0.0.1')
+    app.server.run(debug=True, port=8000, host='127.0.0.1')
