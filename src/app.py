@@ -1,12 +1,11 @@
-from dash import Dash, html, dcc, Input, Output, callback,callback_context
-from dash.dependencies import ALL
+from dash import Dash, html, dcc, callback_context
 import dash_bootstrap_components as dbc
-from components import bar_chart
-import callbacks
-
 import dash_leaflet as dl
+from components import bar_chart, map
+import callbacks
 import pandas as pd
 import ast
+from dash.dependencies import Input, Output, State, ALL
 
 # Create the Dash app
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -31,16 +30,6 @@ special_features_options = [
     {"label": sfeat, "value": sfeat}
     for sfeat in sorted(special_data["SpecialFeature"].dropna().unique())
 ]
-def create_markers(df):
-    return [
-        dl.Marker(
-            position=[row["Latitude"], row["Longitude"]],
-            id={'type': 'park-marker', 'index': row["ParkID"]},
-            children=dl.Popup(f"Park: {row['Name']}"),
-            n_clicks=0
-        )
-        for _, row in df.iterrows()
-    ]
 
 avg_hectare_card = dbc.Card(
     dbc.CardBody([
@@ -160,56 +149,6 @@ app.layout = dbc.Container(fluid=True, children=[
 ],
     style={"padding": "20px"} # This is controling the page style
     )
-
-@app.callback(
-    Output("vancouver-map", "children"),
-    Output("num-parks-text", "children"),
-    Output("avg-hectare-text", "children"),
-    Input("neighbourhood-dropdown", "value"),
-    Input("facility-dropdown", "value"),
-    Input("special-feature-dropdown", "value"),
-    Input("washrooms-checkbox", "value")
-)
-def update_map(selected_neighbourhood, selected_facilities, selected_special_features, washroom_filter):
-    df_filtered = parks_data.copy()
-    
-    # Filter by neighbourhood
-    if selected_neighbourhood:
-        df_filtered = df_filtered[df_filtered["NeighbourhoodName"] == selected_neighbourhood]
-
-    # Filter by washroom availability
-    if washroom_filter is None:
-        washroom_filter = []
-    
-    if "Y" in washroom_filter:
-        df_filtered = df_filtered[df_filtered["Washrooms"] == "Y"]
-
-    park_ids = set(df_filtered["ParkID"])
-
-    # Ensure parks contain *all* selected facilities
-    if selected_facilities:
-        facility_counts = facilities_data[facilities_data["FacilityType"].isin(selected_facilities)]
-        facility_counts = facility_counts.groupby("ParkID")["FacilityType"].nunique()
-        matching_facilities = set(facility_counts[facility_counts == len(selected_facilities)].index)
-        park_ids &= matching_facilities if park_ids else matching_facilities  
-
-    # Ensure parks contain *all* selected special features
-    if selected_special_features:
-        special_counts = special_data[special_data["SpecialFeature"].isin(selected_special_features)]
-        special_counts = special_counts.groupby("ParkID")["SpecialFeature"].nunique()
-        matching_specials = set(special_counts[special_counts == len(selected_special_features)].index)
-        park_ids &= matching_specials if park_ids else matching_specials  
-
-    # Apply the final filter
-    df_filtered = df_filtered[df_filtered["ParkID"].isin(park_ids)]
-
-    num_parks_filtered = df_filtered["ParkID"].nunique()
-    avg_hectare_filtered = df_filtered["Hectare"].mean()
-
-    num_parks_text = str(num_parks_filtered) if num_parks_filtered > 0 else "0"
-    avg_hectare_text = f"{avg_hectare_filtered:.2f}" if not df_filtered.empty else "0.00"
-
-    return [dl.TileLayer()] + create_markers(df_filtered) if not df_filtered.empty else [dl.TileLayer()], num_parks_text, avg_hectare_text
 
 @app.callback(
     Output("park-info", "children"),
