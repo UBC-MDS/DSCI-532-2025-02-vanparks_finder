@@ -3,10 +3,11 @@ import dash_leaflet as dl
 import pandas as pd
 import ast
 from data import parks_data, facilities_data, special_data
-from components.map import create_markers
+from components.map import create_markers, geo_location_dict
 
 @callback(
     Output("vancouver-map", "children"),
+    Output("vancouver-map", "viewport"),
     Output("num-parks-text", "children"),
     Output("avg-hectare-text", "children"),
     Input("neighbourhood-dropdown", "value"),
@@ -17,9 +18,16 @@ from components.map import create_markers
 def update_map(selected_neighbourhood, selected_facilities, selected_special_features, washroom_filter):
     df_filtered = parks_data.copy()
     
+    # Default center and zoom
+    center = [49.2827, -123.1207]  # Default center (Vancouver)
+    zoom = 12  # Default zoom level
+
     # Filter by neighbourhood
     if selected_neighbourhood:
         df_filtered = df_filtered[df_filtered["NeighbourhoodName"] == selected_neighbourhood]
+        if selected_neighbourhood in geo_location_dict:
+            center = geo_location_dict[selected_neighbourhood]['center']
+            zoom = geo_location_dict[selected_neighbourhood]['zoom']
 
     # Filter by washroom availability
     if washroom_filter is None:
@@ -53,4 +61,9 @@ def update_map(selected_neighbourhood, selected_facilities, selected_special_fea
     num_parks_text = str(num_parks_filtered) if num_parks_filtered > 0 else "0"
     avg_hectare_text = f"{avg_hectare_filtered:.2f}" if not df_filtered.empty else "0.00"
 
-    return [dl.TileLayer()] + create_markers(df_filtered) if not df_filtered.empty else [dl.TileLayer()], num_parks_text, avg_hectare_text
+    return (
+        [dl.TileLayer()] + create_markers(df_filtered) if not df_filtered.empty else [dl.TileLayer()],
+        {"center": center, "zoom": zoom, "transition": "flyTo"},
+        num_parks_text,
+        avg_hectare_text
+    )
