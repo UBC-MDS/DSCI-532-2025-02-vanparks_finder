@@ -12,7 +12,7 @@ from .components import (
     num_parks_card,
     park_info_modal
 )
-import callbacks
+from . import callbacks
 
 
 # Create the Dash app
