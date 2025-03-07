@@ -2,3 +2,4 @@
 
 from .bar_chart import update_bar_chart
 from .map import update_map
+from .modal import update_park_info

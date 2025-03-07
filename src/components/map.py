@@ -32,7 +32,9 @@ def create_markers(df):
         dl.Marker(
             position=[row["Latitude"], row["Longitude"]],
             id={'type': 'park-marker', 'index': row["ParkID"]},
-            children=dl.Popup(f"Park: {row['Name']}"),
+            children=[
+                dl.Tooltip(f"Park: {row['Name']}") 
+            ],
             n_clicks=0
         )
         for _, row in df.iterrows()
