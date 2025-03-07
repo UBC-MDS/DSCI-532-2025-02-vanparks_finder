@@ -1,5 +1,5 @@
 import dash_leaflet as dl
-from data import parks_data
+from ..data import parks_data
 
 geo_location_dict = {
     'Arbutus-Ridge': {'zoom': 14.17, 'center': [49.2467288, -123.1594228]},

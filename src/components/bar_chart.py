@@ -2,7 +2,7 @@
 import altair as alt
 import dash_vega_components as dvc
 
-from data import facilities_data
+from ..data import facilities_data
 
 def create_bar_chart(data):
     parks_chart_filter = data.groupby("FacilityType").sum().reset_index()[["FacilityType", "FacilityCount"]]
