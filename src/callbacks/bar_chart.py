@@ -1,5 +1,5 @@
 # imports
-from data import parks_data, facilities_data, special_data
+from ..data import parks_data, facilities_data, special_data
 from dash import Input, Output, callback
 from ..components.bar_chart import create_bar_chart
 
