@@ -1,6 +1,6 @@
 from dash import Dash, html, dcc
 import dash_bootstrap_components as dbc
-from components import bar_chart, park_map, neighbourhood_dropdown, facility_dropdown, special_feature_dropdown, washrooms_checkbox, avg_hectare_card, num_parks_card, park_info_modal
+from components import (bar_chart, park_map, neighbourhood_dropdown, facility_dropdown, special_feature_dropdown, washrooms_checkbox, avg_hectare_card, num_parks_card, park_info_modal)
 import callbacks
 
 
