@@ -1,7 +1,7 @@
 from dash import Dash, html, dcc
 import dash_bootstrap_components as dbc
 # src/app.py
-from components import (
+from .components import (
     bar_chart,
     park_map,
     neighbourhood_dropdown,
