@@ -2,8 +2,8 @@ from dash import Input, Output, callback
 import dash_leaflet as dl
 import pandas as pd
 import ast
-from data import parks_data, facilities_data, special_data
-from components.map import create_markers, geo_location_dict
+from ..data import parks_data, facilities_data, special_data
+from ..components.map import create_markers, geo_location_dict
 
 @callback(
     Output("vancouver-map", "children"),
