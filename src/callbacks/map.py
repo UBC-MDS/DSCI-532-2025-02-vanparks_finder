@@ -61,18 +61,49 @@ def update_map(selected_neighbourhood, selected_facilities, selected_special_fea
     num_parks_text = str(num_parks_filtered) if num_parks_filtered > 0 else "0"
     avg_hectare_text = f"{avg_hectare_filtered:.2f}" if not df_filtered.empty else "0.00"
 
-    if df_filtered.empty:
-        result = ([dl.TileLayer()],
-        {"center": center, "zoom": zoom, "transition": "flyTo"},
-        num_parks_text,
-        avg_hectare_text)
-    else:
-        result = ([dl.TileLayer(), dl.GeoJSON(data=boundary_data, style={"color": "red", "weight": 2, "fillOpacity": 0.2})] +
+    boundary_data_index = {
+        'Arbutus-Ridge': 14,
+        'Downtown': 0,
+        'Dunbar-Southlands': 9,
+        'Fairview': 10,
+        'Grandview-Woodland': 15,
+        'Hastings-Sunrise': 1,
+        'Kensington-Cedar Cottage': 16,
+        'Kerrisdale': 2,
+        'Killarney': 17,
+        'Kitsilano': 18,
+        'Marpole': 3,
+        'Mount Pleasant': 11,
+        'Oakridge': 4,
+        'Renfrew-Collingwood': 12,
+        'Riley Park': 5,
+        'Shaughnessy': 7,
+        'South Cambie': 6,
+        'Strathcona': 19,
+        'Sunset': 20,
+        'Victoria-Fraserview': 8,
+        'West End': 13,
+        'West Point Grey': 21
+    }
+
+    if selected_neighbourhood:
+        filter_index = boundary_data_index.get(selected_neighbourhood)
+        filtered_boundary = boundary_data.copy()
+        filtered_boundary["features"] = [filtered_boundary["features"][filter_index]]
+        print(filtered_boundary)
+
+        result = ([dl.TileLayer(), dl.GeoJSON(data=filtered_boundary, style={"color": "red", "weight": 2, "fillOpacity": 0.2})] +
         create_markers(df_filtered),
         {"center": center, "zoom": zoom, "transition": "flyTo"},
         num_parks_text,
         avg_hectare_text,
         )
+    else:
+        result = ([dl.TileLayer()]+
+        create_markers(df_filtered),
+        {"center": center, "zoom": zoom, "transition": "flyTo"},
+        num_parks_text,
+        avg_hectare_text)
 
 
     return result

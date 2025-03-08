@@ -48,7 +48,7 @@ special_feature_dropdown = dcc.Dropdown(
 
 washrooms_checkbox = dcc.Checklist(
         id="washrooms-checkbox",
-        options=[{"label": " Washroom Avaliability ", "value": "Y"}],
+        options=[{"label": " Washroom Availability ", "value": "Y"}],
         value=[],
         inline=True,
         style={"margin-bottom": "20px"}
