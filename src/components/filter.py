@@ -1,6 +1,6 @@
 import dash_bootstrap_components as dbc
 from dash import dcc, html
-from data import parks_data, facilities_data, special_data
+from ..data import parks_data, facilities_data, special_data
 
 
 neighborhood_options = [

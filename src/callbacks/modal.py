@@ -1,7 +1,7 @@
 from dash import callback,html, callback_context
 from dash.dependencies import Input, Output, State, ALL
 import ast
-from data import parks_data
+from ..data import parks_data
 
 @callback(
     Output("park-info", "children"),
