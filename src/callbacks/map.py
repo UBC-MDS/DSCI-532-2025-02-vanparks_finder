@@ -2,7 +2,7 @@ from dash import Input, Output, callback
 import dash_leaflet as dl
 import pandas as pd
 import ast
-from ..data import parks_data, facilities_data, special_data
+from ..data import parks_data, facilities_data, special_data, boundary_data
 from ..components.map import create_markers, geo_location_dict
 
 @callback(
@@ -61,9 +61,18 @@ def update_map(selected_neighbourhood, selected_facilities, selected_special_fea
     num_parks_text = str(num_parks_filtered) if num_parks_filtered > 0 else "0"
     avg_hectare_text = f"{avg_hectare_filtered:.2f}" if not df_filtered.empty else "0.00"
 
-    return (
-        [dl.TileLayer()] + create_markers(df_filtered) if not df_filtered.empty else [dl.TileLayer()],
+    if df_filtered.empty:
+        result = ([dl.TileLayer()],
         {"center": center, "zoom": zoom, "transition": "flyTo"},
         num_parks_text,
-        avg_hectare_text
-    )
+        avg_hectare_text)
+    else:
+        result = ([dl.TileLayer(), dl.GeoJSON(data=boundary_data, style={"color": "red", "weight": 2, "fillOpacity": 0.2})] +
+        create_markers(df_filtered),
+        {"center": center, "zoom": zoom, "transition": "flyTo"},
+        num_parks_text,
+        avg_hectare_text,
+        )
+
+
+    return result

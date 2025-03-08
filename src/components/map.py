@@ -50,5 +50,5 @@ park_map = dl.Map(
     minZoom=12,
     maxBounds=[[49.1, -123.3], [49.5, -122.7]],
     dragging=True,
-    zoomControl=True
+    zoomControl=True,
 )
