@@ -77,10 +77,10 @@ conda activate vanparks_finder
 
 **Step 3:** Run the Application
 
-After installing the dependencies, go to the `src` directory (assuming the main code is inside the `src/` folder) and run:
+After installing the dependencies, stay in root directory(assuming the main code is inside the `src/` folder) and run:
 
 ```bash
-python app.py
+python -m src.app
 ```
 
 ## Need help? 
