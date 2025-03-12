@@ -1,12 +1,12 @@
-import pandas as pd
-import os
-import ast
-import json
 from shapely.wkb import loads
+import pandas as pd
+import requests
+import os
 
 parks_url = 'https://opendata.vancouver.ca/api/explore/v2.1/catalog/datasets/parks/exports/parquet?lang=en&timezone=America%2FLos_Angeles'
 facilities_url = 'https://opendata.vancouver.ca/api/explore/v2.1/catalog/datasets/parks-facilities/exports/parquet?lang=en&timezone=America%2FLos_Angeles'
 special_features_url = 'https://opendata.vancouver.ca/api/explore/v2.1/catalog/datasets/parks-special-features/exports/parquet?lang=en&timezone=America%2FLos_Angeles'
+boundary_url = 'https://opendata.vancouver.ca/api/explore/v2.1/catalog/datasets/local-area-boundary/exports/geojson?lang=en&timezone=America%2FLos_Angeles'
 
 def download_parquet(url, save_dir, filename):
     save_path = os.path.join(save_dir, filename)  
@@ -31,5 +31,7 @@ facilities_data = pd.read_parquet('src/data/raw/parks-facilities.parquet')
 special_data = pd.read_parquet('src/data/raw/parks-special-features.parquet')
 
 boundary_data_path = "src/data/raw/neighbourhood-boundary.geojson"
-with open(boundary_data_path) as file:
-    boundary_data = json.load(file)
+response = requests.get(boundary_url)
+response.raise_for_status()
+with open(boundary_data_path, "wb") as f:
+    f.write(response.content)
