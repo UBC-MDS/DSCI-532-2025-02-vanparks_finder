@@ -1,6 +1,7 @@
 from shapely.wkb import loads
 import pandas as pd
 import requests
+import json
 import os
 
 parks_url = 'https://opendata.vancouver.ca/api/explore/v2.1/catalog/datasets/parks/exports/parquet?lang=en&timezone=America%2FLos_Angeles'
@@ -30,8 +31,46 @@ parks_data['Longitude'] = parks_data['Coordinates'].apply(lambda p: p.x if p els
 facilities_data = pd.read_parquet('src/data/raw/parks-facilities.parquet')
 special_data = pd.read_parquet('src/data/raw/parks-special-features.parquet')
 
+
+
 boundary_data_path = "src/data/raw/neighbourhood-boundary.geojson"
 response = requests.get(boundary_url)
 response.raise_for_status()
-with open(boundary_data_path, "wb") as f:
-    f.write(response.content)
+
+with open(boundary_data_path, "w", encoding="utf-8") as f:
+    f.write(response.text)
+with open(boundary_data_path, "r", encoding="utf-8") as file:
+    boundary_data = json.load(file)
+
+#Start proprocessing
+
+parks_data.rename(columns={
+    "parkid": "ParkID",
+    "name": "Name",
+    "official": "Official",
+    "advisories": "Advisories",
+    "specialfeatures": "SpecialFeatures",
+    "facilities": "Facilities",
+    "washrooms": "Washrooms",
+    "streetnumber": "StreetNumber",
+    "streetname": "StreetName",
+    "ewstreet": "EWStreet",
+    "nsstreet": "NSStreet",
+    "neighbourhoodname": "NeighbourhoodName",
+    "neighbourhoodurl": "NeighbourhoodURL",
+    "hectare": "Hectare",
+    "googlemapdest": "GoogleMapDest"
+}, inplace=True)
+
+facilities_data.rename(columns={
+    "parkid": "ParkID",
+    "name": "Name",
+    "facilitytype": "FacilityType",
+    "facilitycount": "FacilityCount"
+}, inplace=True)
+
+special_data.rename(columns={
+    "specialfeature": "SpecialFeature",
+    "parkid": "ParkID",
+    "name": "Name",
+}, inplace=True)
