@@ -37,7 +37,8 @@ The Vanparks Finder app will:
 
 ### Try it out!
 
--   Our dashboard is live! Click below to explore it: 👉 [VanParks Finder Dashboard](https://dsci-532-2025-02-vanparks-finder.onrender.com/) 👉 [Click here to view the demo GIF](./img/demo.gif). Feel free to check out how the app works!!
+-   Our dashboard is live! ![Vanparks_finder demo](./img/demo.gif)
+-   👉 Click [here](https://dsci-532-2025-02-vanparks-finder.onrender.com/) to explore more!
 
 ## Who are we? {#who-are-we}
 
