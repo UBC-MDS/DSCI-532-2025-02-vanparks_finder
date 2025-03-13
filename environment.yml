@@ -19,3 +19,4 @@ dependencies:
   - pip:
       - dash-vega-components==0.11.0
       - dash-leaflet==1.0.15
+      - joblib==1.4.2
