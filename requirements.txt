@@ -10,3 +10,4 @@ pandas==2.2.*
 dash-leaflet==1.0.15
 joblib==1.4.2
 shapely==2.0.7
+pyarrow==19.0.1
