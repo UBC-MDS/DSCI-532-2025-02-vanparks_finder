@@ -3,7 +3,7 @@ from ..data import parks_data
 
 geo_location_dict = {
     'Arbutus-Ridge': {'zoom': 14.17, 'center': [49.2467288, -123.1594228]},
-    'Downtown': {'zoom': 14.54, 'center': [49.2790925, -123.1147099]},
+    'Downtown': {'zoom': 14.00, 'center': [49.2832025, -123.1147099]},
     'Dunbar-Southlands': {'zoom': 14.02, 'center': [49.2489659, -123.1860719]},
     'Fairview': {'zoom': 14.37, 'center': [49.2654975, -123.1282056]},
     'Grandview-Woodland': {'zoom': 13.91, 'center': [49.2759762, -123.0682878]},
