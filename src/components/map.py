@@ -9,7 +9,7 @@ geo_location_dict = {
     'Grandview-Woodland': {'zoom': 13.61, 'center': [49.2759762, -123.0682878]},
     'Hastings-Sunrise': {'zoom': 13.5, 'center': [49.2778156, -123.0422014]},
     'Kensington-Cedar Cottage': {'zoom': 13.71, 'center': [49.2471833, -123.0769395]},
-    'Kerrisdale': {'zoom': 14, 'center': [49.225243, -123.16097]},
+    'Kerrisdale': {'zoom': 13.7, 'center': [49.221843, -123.16097]},
     'Killarney': {'zoom': 13.78, 'center': [49.2180367, -123.0383941]},
     'Kitsilano': {'zoom': 14.26, 'center': [49.2674605, -123.1642213]},
     'Marpole': {'zoom': 14.46, 'center': [49.2104717, -123.130635]},
