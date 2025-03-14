@@ -22,7 +22,7 @@ geo_location_dict = {
     'Strathcona': {'zoom': 14.04, 'center': [49.2785961, -123.0887926]},
     'Sunset': {'zoom': 13.78, 'center': [49.2188485, -123.0911351]},
     'Victoria-Fraserview': {'zoom': 13.7, 'center': [49.217683, -123.062963]},
-    'West End': {'zoom': 14.71, 'center': [49.2853688, -123.1342539]},
+    'West End': {'zoom': 13.7, 'center': [49.2893688, -123.1342539]},
     'West Point Grey': {'zoom': 14, 'center': [49.266988, -123.202435]}
 }
 
