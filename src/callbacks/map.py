@@ -4,7 +4,9 @@ import pandas as pd
 import ast
 from ..data import parks_data, facilities_data, special_data, boundary_data
 from ..components.map import create_markers, geo_location_dict
+import joblib
 
+memory = joblib.Memory("tmp", verbose=0)
 @callback(
     Output("vancouver-map", "children"),
     Output("vancouver-map", "viewport"),
@@ -15,6 +17,8 @@ from ..components.map import create_markers, geo_location_dict
     Input("special-feature-dropdown", "value"),
     Input("washrooms-checkbox", "value")
 )
+
+@memory.cache()
 def update_map(selected_neighbourhood, selected_facilities, selected_special_features, washroom_filter):
     df_filtered = parks_data.copy()
     
@@ -62,35 +66,36 @@ def update_map(selected_neighbourhood, selected_facilities, selected_special_fea
     avg_hectare_text = f"{avg_hectare_filtered:.2f}" if not df_filtered.empty else "0.00"
 
     boundary_data_index = {
-        'Arbutus-Ridge': 14,
-        'Downtown': 0,
-        'Dunbar-Southlands': 9,
-        'Fairview': 10,
-        'Grandview-Woodland': 15,
-        'Hastings-Sunrise': 1,
-        'Kensington-Cedar Cottage': 16,
-        'Kerrisdale': 2,
-        'Killarney': 17,
-        'Kitsilano': 18,
-        'Marpole': 3,
-        'Mount Pleasant': 11,
-        'Oakridge': 4,
-        'Renfrew-Collingwood': 12,
-        'Riley Park': 5,
-        'Shaughnessy': 7,
-        'South Cambie': 6,
-        'Strathcona': 19,
-        'Sunset': 20,
-        'Victoria-Fraserview': 8,
-        'West End': 13,
-        'West Point Grey': 21
-    }
+    "Downtown": 0,
+    "Hastings-Sunrise": 1,
+    "Kerrisdale": 2,
+    "Marpole": 3,
+    "Oakridge": 4,
+    "Riley Park": 5,
+    "South Cambie": 6,
+    "Shaughnessy": 7,
+    "Victoria-Fraserview": 8,
+    "Arbutus-Ridge": 9,
+    "Grandview-Woodland": 10,
+    "Kensington-Cedar Cottage": 11,
+    "Killarney": 12,
+    "Kitsilano": 13,
+    "Strathcona": 14,
+    "Sunset": 15,
+    "West Point Grey": 16,
+    "Dunbar-Southlands": 17,
+    "Fairview": 18,
+    "Mount Pleasant": 19,
+    "Renfrew-Collingwood": 20,
+    "West End": 21,
+}
+
+
 
     if selected_neighbourhood:
         filter_index = boundary_data_index.get(selected_neighbourhood)
         filtered_boundary = boundary_data.copy()
         filtered_boundary["features"] = [filtered_boundary["features"][filter_index]]
-        print(filtered_boundary)
 
         result = ([dl.TileLayer(), dl.GeoJSON(data=filtered_boundary, style={"color": "red", "weight": 2, "fillOpacity": 0.2})] +
         create_markers(df_filtered),
@@ -99,6 +104,7 @@ def update_map(selected_neighbourhood, selected_facilities, selected_special_fea
         avg_hectare_text,
         )
     else:
+        print("no selected")
         result = ([dl.TileLayer()]+
         create_markers(df_filtered),
         {"center": center, "zoom": zoom, "transition": "flyTo"},

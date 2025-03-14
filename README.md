@@ -37,9 +37,8 @@ The Vanparks Finder app will:
 
 ### Try it out!
 
--   Our dashboard is live! Click below to explore it:
-👉 [VanParks Finder Dashboard](https://dsci-532-2025-02-vanparks-finder.onrender.com/)
-👉 [Click here to view the demo GIF](./img/demo.gif). Feel free to check out how the app works!!
+-   Our dashboard is live! ![Vanparks_finder demo](./img/demo.gif)
+-   👉 Click [here](https://dsci-532-2025-02-vanparks-finder.onrender.com/) to explore more!
 
 ## Who are we? 
 
@@ -61,16 +60,16 @@ Now, Follow the steps below to set up the project and start contributing:
 
 Run the following commands in your terminal to clone the repository to your local machine:
 
-```bash
-git clone <https://github.com/UBC-MDS/DSCI-532-2025-02-vanparks_finder.git>
-cd <DSCI-532-2025-02-vanparks_finder>
+``` bash
+git clone https://github.com/UBC-MDS/DSCI-532-2025-02-vanparks_finder.git
+cd DSCI-532-2025-02-vanparks_finder
 ```
 
 **Step 2:** Install dependencies using Conda
 
 If you are using Conda (such as Anaconda or Miniconda), run:
 
-```bash
+``` bash
 conda env create -f environment.yml
 conda activate vanparks_finder
 ```
@@ -79,10 +78,10 @@ conda activate vanparks_finder
 
 After installing the dependencies, stay in root directory(assuming the main code is inside the `src/` folder) and run:
 
-```bash
+``` bash
 python -m src.app
 ```
 
-## Need help? 
+## Need help?
 
 If you run into any issues, feel free to [open an issue](https://github.com/UBC-MDS/DSCI-532-2025-02-vanparks_finder/issues) on GitHub. We'd love to hear your feedback and help resolve any problems!

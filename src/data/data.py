@@ -1,14 +1,19 @@
+from dash import Input, Output, callback
+import dash_leaflet as dl
 import pandas as pd
-import ast
 import json
+from shapely.wkb import loads
 
-parks_data = pd.read_csv('data/raw/parks.csv', delimiter =';')
-parks_data['Coordinates'] = parks_data['GoogleMapDest'].apply(ast.literal_eval)
-parks_data[['Latitude', 'Longitude']] = pd.DataFrame(parks_data['Coordinates'].to_list(), index=parks_data.index)
+parks_data = pd.read_parquet('data/processed/parks.parquet')
+facilities_data = pd.read_parquet('data/processed/parks-facilities.parquet')
+special_data = pd.read_parquet('data/processed/parks-special-features.parquet')
+print(tuple())
 
-facilities_data = pd.read_csv('data/raw/parks-facilities.csv', delimiter=';')
-special_data = pd.read_csv('data/raw/parks-special-features.csv', delimiter=';')
 
 boundary_data_path = "data/raw/neighbourhood-boundary.geojson"
-with open(boundary_data_path) as file:
-    boundary_data= json.load(file)
+
+with open(boundary_data_path, "r", encoding="utf-8") as file:
+    boundary_data = json.load(file)
+
+#Start proprocessing
+
