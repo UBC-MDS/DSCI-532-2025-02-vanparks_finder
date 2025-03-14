@@ -16,7 +16,7 @@ geo_location_dict = {
     'Mount Pleasant': {'zoom': 14.63, 'center': [49.2647148, -123.0978001]},
     'Oakridge': {'zoom': 14.01, 'center': [49.226586, -123.122330]},
     'Renfrew-Collingwood': {'zoom': 13.81, 'center': [49.2483732, -123.0386256]},
-    'Riley Park': {'zoom': 14.28, 'center': [49.24452, -123.1020171]},
+    'Riley Park': {'zoom': 14.18, 'center': [49.24452, -123.1020171]},
     'Shaughnessy': {'zoom': 14.3, 'center': [49.2456008, -123.1415797]},
     'South Cambie': {'zoom': 14.1, 'center': [49.246474, -123.121238]},
     'Strathcona': {'zoom': 14.94, 'center': [49.2725961, -123.0887926]},
