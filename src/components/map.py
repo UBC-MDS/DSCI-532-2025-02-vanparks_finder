@@ -12,7 +12,7 @@ geo_location_dict = {
     'Kerrisdale': {'zoom': 13.7, 'center': [49.221843, -123.16097]},
     'Killarney': {'zoom': 13.58, 'center': [49.2180367, -123.0383941]},
     'Kitsilano': {'zoom': 14.16, 'center': [49.2674605, -123.1642213]},
-    'Marpole': {'zoom': 14.46, 'center': [49.2104717, -123.130635]},
+    'Marpole': {'zoom': 14.26, 'center': [49.2104717, -123.130635]},
     'Mount Pleasant': {'zoom': 14.63, 'center': [49.2647148, -123.0978001]},
     'Oakridge': {'zoom': 14.01, 'center': [49.226586, -123.122330]},
     'Renfrew-Collingwood': {'zoom': 13.81, 'center': [49.2483732, -123.0386256]},
