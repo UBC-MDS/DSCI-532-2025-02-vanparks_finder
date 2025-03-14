@@ -19,7 +19,7 @@ def update_map(selected_neighbourhood, selected_facilities, selected_special_fea
     df_filtered = parks_data.copy()
     
     # Default center and zoom
-    center = [49.2827, -123.1207]  # Default center (Vancouver)
+    center = [49.2550, -123.1207]  # Default center (Vancouver)
     zoom = 12  # Default zoom level
 
     # Filter by neighbourhood

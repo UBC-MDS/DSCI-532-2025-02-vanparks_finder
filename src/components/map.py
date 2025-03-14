@@ -43,7 +43,7 @@ def create_markers(df):
 park_map = dl.Map(
     children=[dl.TileLayer()],
     id="vancouver-map",
-    center=[49.2827, -123.1207],
+    center=[49.2550, -123.1207],
     zoom=12,
     style={'height': '70vh'},
     maxZoom=18,
