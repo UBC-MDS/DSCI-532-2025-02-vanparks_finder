@@ -15,7 +15,7 @@ Jump to a section below or scroll down to dive in:
 -   [What do we need?](#what-do-we-need)
 -   [How can you get involved?](#get-involved)
 
-## What are we doing? {#what-are-we-doing}
+## What are we doing? 
 
 ### The problem
 
