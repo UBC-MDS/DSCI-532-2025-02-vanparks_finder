@@ -40,17 +40,17 @@ The Vanparks Finder app will:
 -   Our dashboard is live! ![Vanparks_finder demo](./img/demo.gif)
 -   👉 Click [here](https://dsci-532-2025-02-vanparks-finder.onrender.com/) to explore more!
 
-## Who are we? {#who-are-we}
+## Who are we? 
 
 The contributors of the Vanparks Finder app - [Shengjia Yu](https://github.com/shengjiayuu), [Ximin Xu](https://github.com/davyxuximin), [Timothy Singh](https://github.com/SimplyTim) and [Inder Khera](https://github.com/InderKhera) - are students who are taking DSCI532 in the Master of Data Science at [UBC](https://www.ubc.ca/).
 
-## What do we need? {#what-do-we-need}
+## What do we need? 
 
 **You**! In whatever way you can help.
 
 We're looking for contributors to help make VanParks Finder even better. Whether you’re a developer, designer, data enthusiast, or just passionate about making Vancouver’s parks more accessible, there’s a place for you!
 
-## Get involved {#get-involved}
+## Get involved 
 
 Interested in contributing? Check out the [contributing guidelines](./CONTRIBUTING.md) before you start to contribute. Please note that this project is released with a [Code of Conduct](./CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
 
