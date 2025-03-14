@@ -7,7 +7,7 @@ geo_location_dict = {
     'Dunbar-Southlands': {'zoom': 13.22, 'center': [49.23909, -123.1860719]},
     'Fairview': {'zoom': 14.37, 'center': [49.2654975, -123.1282056]},
     'Grandview-Woodland': {'zoom': 13.61, 'center': [49.2759762, -123.0682878]},
-    'Hastings-Sunrise': {'zoom': 13, 'center': [49.2778156, -123.0422014]},
+    'Hastings-Sunrise': {'zoom': 13.5, 'center': [49.2778156, -123.0422014]},
     'Kensington-Cedar Cottage': {'zoom': 14.01, 'center': [49.2471833, -123.0769395]},
     'Kerrisdale': {'zoom': 14, 'center': [49.225243, -123.16097]},
     'Killarney': {'zoom': 13.78, 'center': [49.2180367, -123.0383941]},
