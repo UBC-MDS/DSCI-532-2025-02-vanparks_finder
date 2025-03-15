@@ -23,7 +23,7 @@ def create_bar_chart(data):
         titleFontSize=14,
         labelFontStyle='Helvetica'
     ).properties(
-        title="Top 5 Most Common Facilities",
+        title="Most Common Facilities",
         width=550,
         height=80
     ).configure_title(
