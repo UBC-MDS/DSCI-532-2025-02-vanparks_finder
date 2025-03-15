@@ -10,8 +10,8 @@ def create_bar_chart(data):
     alt.theme.enable("fivethirtyeight")
 
     chart = alt.Chart(parks_chart_filter).mark_bar().encode(
-        x=alt.X('FacilityCount:Q').scale(nice=True).axis(format='d'),
-        y=alt.Y('FacilityType:N').sort('-x'),
+        x=alt.X('FacilityCount:Q').scale(nice=True).axis(format='d').title("Number of Facilities"),
+        y=alt.Y('FacilityType:N').sort('-x').title("Type of Facility"),
         color=alt.Color('FacilityType', legend=None),
         tooltip = ['FacilityType','FacilityCount']
     ).configure(
@@ -20,10 +20,10 @@ def create_bar_chart(data):
         labelColor= "black",
         titleColor= "grey",
         labelFontSize=12,
-        titleFontSize=12,
+        titleFontSize=14,
         labelFontStyle='Helvetica'
     ).properties(
-        title="Top 5 Facilities",
+        title="Most Common Facilities",
         width=550,
         height=80
     ).configure_title(
